@@ -1,0 +1,76 @@
+import logoStemsao from "@/assets/logo-stemsao.png.asset.json";
+import logoUfop from "@/assets/logo-ufop.jpg.asset.json";
+
+export function Footer() {
+  return (
+    <footer className="surface-plate">
+      <div className="container-narrow py-14">
+        <div className="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
+          <div>
+            <div className="flex items-center gap-4">
+              <img
+                src={logoStemsao.url}
+                alt="STEMsão"
+                className="h-14 w-14 rounded-full ring-copper"
+                width={56}
+                height={56}
+                loading="lazy"
+              />
+              <div>
+                <div className="font-display text-2xl">
+                  STEM<span className="text-copper">são</span>
+                </div>
+                <div className="text-xs uppercase tracking-[0.2em] text-primary-foreground/70">
+                  Evento de Extensão · UFOP
+                </div>
+              </div>
+            </div>
+            <p className="mt-5 max-w-md text-sm leading-relaxed text-primary-foreground/75">
+              Evento gratuito de ciência, tecnologia, engenharia e matemática
+              promovido pelo ICEB — Universidade Federal de Ouro Preto.
+            </p>
+            <img
+              src={logoUfop.url}
+              alt="Universidade Federal de Ouro Preto"
+              className="mt-6 h-16 w-auto opacity-90"
+              width={96}
+              height={128}
+              loading="lazy"
+            />
+          </div>
+
+          <div>
+            <h4 className="text-xs uppercase tracking-[0.2em] text-copper">Local</h4>
+            <p className="mt-4 text-sm leading-relaxed text-primary-foreground/85">
+              Instituto de Ciências Exatas e Biológicas (ICEB)
+              <br />
+              Campus Universitário Morro do Cruzeiro
+              <br />
+              Universidade Federal de Ouro Preto (UFOP)
+              <br />
+              Ouro Preto — MG
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-xs uppercase tracking-[0.2em] text-copper">Data</h4>
+            <p className="mt-4 text-sm leading-relaxed text-primary-foreground/85">
+              12 e 13 de novembro de 2026
+            </p>
+            <h4 className="mt-6 text-xs uppercase tracking-[0.2em] text-copper">Contato</h4>
+            <p className="mt-4 text-sm leading-relaxed text-primary-foreground/85">
+              <a href="mailto:stemsao@ufop.edu.br" className="underline-offset-4 hover:underline">
+                stemsao@ufop.edu.br
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/60 md:flex-row md:items-center">
+          <p>© 2026 STEMsão · UFOP / ICEB. Todos os direitos reservados.</p>
+          <p>Evento de extensão universitária.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
