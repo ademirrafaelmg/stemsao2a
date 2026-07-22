@@ -19,20 +19,20 @@ export const Route = createFileRoute("/")({
         content:
           "STEMsão é um evento gratuito de ciência, tecnologia, engenharia e matemática promovido pelo ICEB — Universidade Federal de Ouro Preto. 12 e 13 de novembro de 2026, em Ouro Preto/MG.",
       },
-      { property: "og:title", content: "STEMsão 2026 · Ciência para Todos" },
+      { property: "og:title", content: "STEMsão 2026 · Evento de Extensão UFOP/ICEB · 12 e 13 de novembro" },
       {
         property: "og:description",
         content:
-          "Evento gratuito de STEM em Ouro Preto/MG. Palestras com pesquisadoras renomadas, oficinas práticas e muita ciência. 12 e 13 de novembro de 2026.",
+          "STEMsão é um evento gratuito de ciência, tecnologia, engenharia e matemática promovido pelo ICEB — Universidade Federal de Ouro Preto. 12 e 13 de novembro de 2026, em Ouro Preto/MG.",
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "STEMsão 2026 · Ciência para Todos" },
+      { name: "twitter:title", content: "STEMsão 2026 · Evento de Extensão UFOP/ICEB · 12 e 13 de novembro" },
       {
         name: "twitter:description",
         content:
-          "Evento gratuito de STEM em Ouro Preto/MG. 12 e 13 de novembro de 2026.",
+          "STEMsão é um evento gratuito de ciência, tecnologia, engenharia e matemática promovido pelo ICEB — Universidade Federal de Ouro Preto. 12 e 13 de novembro de 2026, em Ouro Preto/MG.",
       },
     ],
   }),
