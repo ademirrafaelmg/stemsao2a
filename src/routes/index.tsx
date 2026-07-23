@@ -291,12 +291,12 @@ const schedule = [
       {
         time: "9h",
         title: "Palestra — Profª. Deborah Malta (UFMG)",
-        detail: "Convidada.",
+        detail: "Título a ser confirmado.",
       },
       {
         time: "9h45",
         title: "Palestra — Profª. Roberta Fróes (Vice-reitora da UFOP)",
-        detail: "Título a ser anunciado. Confirmada.",
+        detail: "Título a ser confirmado.",
       },
       {
         time: "10h30",
