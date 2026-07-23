@@ -1,5 +1,5 @@
 import logoStemsao from "@/assets/logo-stemsao.png.asset.json";
-import logoUfop from "@/assets/logo-ufop.jpg.asset.json";
+import logoUfop from "@/assets/logo-ufop-v2.png.asset.json";
 
 export function Footer() {
   return (
@@ -11,9 +11,9 @@ export function Footer() {
               <img
                 src={logoStemsao.url}
                 alt="STEMsão"
-                className="h-14 w-14 rounded-full object-contain ring-copper"
-                width={56}
-                height={56}
+                className="h-20 w-20 object-contain"
+                width={96}
+                height={96}
                 loading="lazy"
               />
               <div>
@@ -29,14 +29,6 @@ export function Footer() {
               Evento gratuito de ciência, tecnologia, engenharia e matemática
               promovido pelo ICEB — Universidade Federal de Ouro Preto.
             </p>
-            <img
-              src={logoUfop.url}
-              alt="Universidade Federal de Ouro Preto"
-              className="mt-6 h-16 w-auto opacity-90"
-              width={96}
-              height={128}
-              loading="lazy"
-            />
           </div>
 
           <div>
@@ -52,17 +44,25 @@ export function Footer() {
             </p>
           </div>
 
-          <div>
-            <h4 className="text-xs uppercase tracking-[0.2em] text-copper">Data</h4>
-            <p className="mt-4 text-sm leading-relaxed text-primary-foreground/85">
-              12 e 13 de novembro de 2026
-            </p>
-            <h4 className="mt-6 text-xs uppercase tracking-[0.2em] text-copper">Contato</h4>
-            <p className="mt-4 text-sm leading-relaxed text-primary-foreground/85">
-              <a href="mailto:stemsao@ufop.edu.br" className="underline-offset-4 hover:underline">
-                stemsao@ufop.edu.br
-              </a>
-            </p>
+          <div className="flex items-start gap-5">
+            <div className="flex-1">
+              <h4 className="text-xs uppercase tracking-[0.2em] text-copper">Data</h4>
+              <p className="mt-4 text-sm leading-relaxed text-primary-foreground/85">
+                12 e 13 de novembro de 2026
+              </p>
+              <h4 className="mt-6 text-xs uppercase tracking-[0.2em] text-copper">Contato</h4>
+              <p className="mt-4 text-sm leading-relaxed text-primary-foreground/85">
+                <a href="mailto:stemsao@ufop.edu.br" className="underline-offset-4 hover:underline">
+                  stemsao@ufop.edu.br
+                </a>
+              </p>
+            </div>
+            <img
+              src={logoUfop.url}
+              alt="Universidade Federal de Ouro Preto"
+              className="h-40 w-auto self-stretch object-contain"
+              loading="lazy"
+            />
           </div>
         </div>
 

@@ -215,6 +215,85 @@ function Sobre() {
 }
 
 /* ---------------- PROGRAMAÇÃO ---------------- */
+const schedule = [
+  {
+    day: "Dia 1",
+    date: "12 de novembro",
+    theme: "Ciência para todos",
+    items: [
+      {
+        time: "9h",
+        title: "Abertura oficial",
+        detail:
+          "Profª. Patrícia (Diretora do ICEB); Profª. Denise Carvalho (Presidenta da CAPES); Profª. Sandra Nogueira (CG Extensão/SESU/MEC); Profª. Roberta Fróes (Vice-reitora da UFOP); Profª. Débora Etrusco (Secretária de Educação da PMOP).",
+      },
+      {
+        time: "9h30",
+        title: "Palestra magna — Profª. Denise Carvalho (CAPES)",
+        detail: "“Mulheres e meninas em STEM”. Convite aceito.",
+      },
+      { time: "10h30", title: "Intervalo" },
+      {
+        time: "11h",
+        title: "Palestra — Profª. Márcia Barbosa (Reitora da UFRGS)",
+        detail: "“Água: da Era do Gelo à Nanociência”. Confirmada.",
+      },
+      { time: "12h", title: "Intervalo" },
+      {
+        time: "13h30",
+        title: "Palestra — Profª. Rita Mesquita (MMA / INPA)",
+        detail: "Título a ser anunciado. Convidada.",
+      },
+      {
+        time: "14h15",
+        title: "Experimentando Ciência",
+        detail: "Oficinas práticas para estudantes do Ensino Médio.",
+      },
+      { time: "16h", title: "Intervalo" },
+      {
+        time: "17h",
+        title: "Palestra — Profª. Andrea Gomes Campos (UFOP)",
+        detail: "Título a ser anunciado. Confirmada.",
+      },
+      { time: "18h", title: "Intervalo" },
+      {
+        time: "19h",
+        title: "Palestra — Profª. Tatiana Sampaio (UFRJ)",
+        detail: "Título a ser anunciado. Convidada.",
+      },
+    ],
+  },
+  {
+    day: "Dia 2",
+    date: "13 de novembro",
+    theme: "Ciência que transforma",
+    items: [
+      {
+        time: "9h",
+        title: "Palestra — Profª. Deborah Malta (UFMG)",
+        detail: "Convidada.",
+      },
+      {
+        time: "9h45",
+        title: "Palestra — Profª. Roberta Fróes (Vice-reitora da UFOP)",
+        detail: "Título a ser anunciado. Confirmada.",
+      },
+      {
+        time: "10h30",
+        title: "Intervalo com sessão de pôsteres",
+        detail: "Trabalhos selecionados no Encontro de Saberes 2026.",
+      },
+      { time: "12h", title: "Intervalo" },
+      {
+        time: "13h30",
+        title: "Experimentando Ciência",
+        detail: "Oficinas voltadas para estudantes do Ensino Fundamental (8º e 9º anos).",
+      },
+      { time: "17h", title: "Encerramento" },
+    ],
+  },
+];
+
 function Programacao() {
   return (
     <section id="programacao" className="surface-plate py-24 md:py-32">
@@ -225,17 +304,13 @@ function Programacao() {
           </div>
           <h2 className="mt-4 text-4xl md:text-5xl">Dois dias intensos de ciência</h2>
           <p className="mt-4 text-primary-foreground/80">
-            Palestras magnas, mesas-redondas e oficinas práticas distribuídas
-            nos dias 12 e 13 de novembro. A grade completa será anunciada em
-            breve.
+            Palestras magnas, mesas-redondas e oficinas práticas nos dias 12 e
+            13 de novembro. Programação sujeita a pequenas alterações.
           </p>
         </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {[
-            { day: "Dia 1", date: "12 de novembro", theme: "Ciência para todos" },
-            { day: "Dia 2", date: "13 de novembro", theme: "Ciência que transforma" },
-          ].map((d) => (
+          {schedule.map((d) => (
             <article
               key={d.day}
               className="group relative overflow-hidden rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5 p-8 backdrop-blur transition-all hover:bg-primary-foreground/10"
@@ -247,21 +322,23 @@ function Programacao() {
                 </div>
               </div>
               <h3 className="mt-4 text-2xl">{d.theme}</h3>
-              <ul className="mt-6 space-y-3 text-sm text-primary-foreground/85">
-                {["Abertura oficial", "Palestra magna", "Mesa-redonda", "Oficinas práticas", "Encerramento"].map(
-                  (item, i) => (
-                    <li key={item} className="flex items-center gap-3">
-                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-copper/20 text-[11px] font-semibold text-copper">
-                        {i + 1}
-                      </span>
-                      {item}
-                    </li>
-                  ),
-                )}
+              <ul className="mt-6 space-y-4 text-sm text-primary-foreground/85">
+                {d.items.map((item) => (
+                  <li key={item.time + item.title} className="flex gap-4">
+                    <span className="mt-0.5 inline-flex min-w-[3.5rem] justify-center rounded-full bg-copper/20 px-2 py-1 font-display text-[11px] font-semibold tracking-wide text-copper">
+                      {item.time}
+                    </span>
+                    <div className="flex-1">
+                      <div className="font-medium text-primary-foreground">{item.title}</div>
+                      {item.detail && (
+                        <p className="mt-1 text-xs leading-relaxed text-primary-foreground/70">
+                          {item.detail}
+                        </p>
+                      )}
+                    </div>
+                  </li>
+                ))}
               </ul>
-              <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-copper/40 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-copper">
-                Horários em breve
-              </div>
             </article>
           ))}
         </div>
@@ -269,6 +346,7 @@ function Programacao() {
     </section>
   );
 }
+
 
 /* ---------------- PALESTRANTES ---------------- */
 function Palestrantes() {
