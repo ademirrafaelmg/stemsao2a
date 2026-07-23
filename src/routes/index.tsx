@@ -124,7 +124,7 @@ function Hero() {
           <h1 className="mt-6 font-display text-5xl leading-[0.98] text-primary-foreground sm:text-6xl md:text-7xl lg:text-8xl">
             STEM<span className="text-gradient-copper">são</span>
             <span className="mt-3 block font-sans text-lg font-medium uppercase tracking-[0.24em] text-primary-foreground/80 sm:text-xl">
-              Ciência para todos
+              Ciências para todas as pessoas
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
