@@ -250,19 +250,19 @@ const schedule = [
       {
         time: "9h30",
         title: "Palestra magna — Profª. Denise Carvalho (CAPES)",
-        detail: "“Mulheres e meninas em STEM”. Convite aceito.",
+        detail: "“Mulheres e meninas em STEM”.",
       },
       { time: "10h30", title: "Intervalo" },
       {
         time: "11h",
         title: "Palestra — Profª. Márcia Barbosa (Reitora da UFRGS)",
-        detail: "“Água: da Era do Gelo à Nanociência”. Confirmada.",
+        detail: "“Água: da Era do Gelo à Nanociência”.",
       },
       { time: "12h", title: "Intervalo" },
       {
         time: "13h30",
         title: "Palestra — Profª. Rita Mesquita (MMA / INPA)",
-        detail: "Título a ser anunciado. Convidada.",
+        detail: "Título a ser confirmado.",
       },
       {
         time: "14h15",
@@ -273,13 +273,13 @@ const schedule = [
       {
         time: "17h",
         title: "Palestra — Profª. Andrea Gomes Campos (UFOP)",
-        detail: "Título a ser anunciado. Confirmada.",
+        detail: "Título a ser confirmado.",
       },
       { time: "18h", title: "Intervalo" },
       {
         time: "19h",
         title: "Palestra — Profª. Tatiana Sampaio (UFRJ)",
-        detail: "Título a ser anunciado. Convidada.",
+        detail: "Título a ser confirmado.",
       },
     ],
   },
