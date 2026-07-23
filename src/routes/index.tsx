@@ -500,7 +500,7 @@ function CTA() {
         src={ctaImg}
         alt=""
         aria-hidden
-        className="absolute inset-0 -z-20 h-full w-full object-cover"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-[center_60%]"
         width={1920}
         height={912}
         loading="lazy"
