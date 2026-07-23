@@ -2,9 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { ContactForm } from "@/components/site/ContactForm";
-import heroImg from "@/assets/hero-ouro-preto.jpg";
+import heroImgAsset from "@/assets/hero-ouro-preto.jpg.asset.json";
 import sobreImg from "@/assets/section-sobre.jpg";
-import ctaImg from "@/assets/cta-background.jpg";
+import ctaImgAsset from "@/assets/cta-background.jpg.asset.json";
+const heroImg = heroImgAsset.url;
+const ctaImg = ctaImgAsset.url;
 import speaker1 from "@/assets/speaker-placeholder-1.jpg";
 import speaker2 from "@/assets/speaker-placeholder-2.jpg";
 import speaker3 from "@/assets/speaker-placeholder-3.jpg";
@@ -41,25 +43,25 @@ export const Route = createFileRoute("/")({
 
 const speakers = [
   {
-    name: "Profa. Denise Carvalho",
+    name: "Profª. Denise Carvalho",
     role: "Presidenta da CAPES",
-    bio: "Profa. Denise Carvalho é presidenta da CAPES, com vasta experiência em políticas educacionais. É uma referência na inclusão de mulheres nas áreas STEM.",
+    bio: "Profª. Denise Carvalho é presidenta da CAPES, com vasta experiência em políticas educacionais. É uma referência na inclusão de mulheres nas áreas STEM.",
     img: speaker1,
   },
   {
-    name: "Profa. Márcia Barbosa",
+    name: "Profª. Márcia Barbosa",
     role: "Reitora da UFRGS",
     bio: "Especialista em Ciência da Água, seu trabalho aborda desde a Era do Gelo até a Nanociência, com reconhecimento internacional.",
     img: speaker2,
   },
   {
-    name: "Profa. Andrea Gomes Campos",
+    name: "Profª. Andrea Gomes Campos",
     role: "Docente da UFOP",
     bio: "Desenvolve pesquisas em áreas interdisciplinares, contribuindo para a educação científica local e a formação de novas gerações.",
     img: speaker3,
   },
   {
-    name: "Profa. Deborah Malta",
+    name: "Profª. Deborah Malta",
     role: "Pesquisadora da UFMG",
     bio: "Reconhecida em Ciências Ambientais, traz enfoque crítico sobre o uso de recursos hídricos e sustentabilidade.",
     img: speaker4,
@@ -68,16 +70,16 @@ const speakers = [
 
 const organizers = [
   {
-    name: "ICEB — Ouro Preto",
+    name: "Instituto de Ciências Exatas e Biológicas — ICEB",
     text: "O Instituto de Ciências Exatas e Biológicas da UFOP é responsável pela organização e execução do evento, promovendo conhecimento e pesquisa científica.",
+  },
+  {
+    name: "Universidade Federal de Ouro Preto — UFOP",
+    text: "A Universidade Federal de Ouro Preto proporciona infraestrutura e recursos para o evento, reforçando seu compromisso com a difusão do conhecimento.",
   },
   {
     name: "Prefeitura de Ouro Preto",
     text: "Apoia o evento reconhecendo a importância da educação científica para o desenvolvimento local e o engajamento da comunidade.",
-  },
-  {
-    name: "UFOP",
-    text: "A Universidade Federal de Ouro Preto proporciona infraestrutura e recursos para o evento, reforçando seu compromisso com a difusão do conhecimento.",
   },
 ];
 
@@ -122,7 +124,7 @@ function Hero() {
           <h1 className="mt-6 font-display text-5xl leading-[0.98] text-primary-foreground sm:text-6xl md:text-7xl lg:text-8xl">
             STEM<span className="text-gradient-copper">são</span>
             <span className="mt-3 block font-sans text-lg font-medium uppercase tracking-[0.24em] text-primary-foreground/80 sm:text-xl">
-              Ciência para todos
+              Ciências para todas as pessoas
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
