@@ -34,9 +34,9 @@ export function Header() {
           <img
             src={logoStemsao.url}
             alt="STEMsão"
-            className="h-14 w-14 md:h-20 md:w-20 object-contain"
-            width={96}
-            height={96}
+            className="h-[5.25rem] w-[5.25rem] md:h-[7.5rem] md:w-[7.5rem] object-contain"
+            width={144}
+            height={144}
           />
           <div className="hidden sm:block leading-tight">
             <div
