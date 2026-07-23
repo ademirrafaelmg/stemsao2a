@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -45,7 +46,7 @@ const speakers = [
   {
     name: "Profª. Denise Carvalho",
     role: "Presidenta da CAPES",
-    bio: "Profª. Denise Carvalho é presidenta da CAPES, com vasta experiência em políticas educacionais. É uma referência na inclusão de mulheres nas áreas STEM.",
+    bio: "Presidenta da CAPES, com vasta experiência em políticas educacionais e ampla atuação pela inclusão de mulheres nas áreas STEM.",
     img: speaker1,
   },
   {
@@ -55,16 +56,34 @@ const speakers = [
     img: speaker2,
   },
   {
+    name: "Profª. Rita Mesquita",
+    role: "MMA · INPA",
+    bio: "Bióloga do Instituto Nacional de Pesquisas da Amazônia com longa trajetória em conservação, biodiversidade e políticas ambientais, tendo atuado no Ministério do Meio Ambiente.",
+    img: speaker3,
+  },
+  {
     name: "Profª. Andrea Gomes Campos",
     role: "Docente da UFOP",
     bio: "Desenvolve pesquisas em áreas interdisciplinares, contribuindo para a educação científica local e a formação de novas gerações.",
-    img: speaker3,
+    img: speaker4,
+  },
+  {
+    name: "Profª. Tatiana Sampaio",
+    role: "Docente da UFRJ",
+    bio: "Pesquisadora da Universidade Federal do Rio de Janeiro, com produção acadêmica voltada à divulgação científica e à formação de estudantes em ciência e tecnologia.",
+    img: speaker1,
   },
   {
     name: "Profª. Deborah Malta",
     role: "Pesquisadora da UFMG",
-    bio: "Reconhecida em Ciências Ambientais, traz enfoque crítico sobre o uso de recursos hídricos e sustentabilidade.",
-    img: speaker4,
+    bio: "Referência em saúde coletiva e epidemiologia, com atuação destacada em vigilância de doenças crônicas e promoção da saúde no Brasil.",
+    img: speaker2,
+  },
+  {
+    name: "Profª. Roberta Fróes",
+    role: "Vice-reitora da UFOP",
+    bio: "Vice-reitora da Universidade Federal de Ouro Preto, com trajetória dedicada à gestão universitária, ensino e extensão em ciência e educação.",
+    img: speaker3,
   },
 ];
 
@@ -128,9 +147,10 @@ function Hero() {
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
-            Um evento gratuito de extensão universitária que aproxima a comunidade
-            de Ouro Preto da ciência, tecnologia, engenharia e matemática — com
-            palestras inspiradoras e oficinas práticas.
+            Um evento gratuito de extensão universitária com dois dias de encontro
+            entre a universidade e a comunidade de Ouro Preto e Mariana: palestras
+            magnas, oficinas práticas e uma celebração das mulheres na ciência,
+            na tecnologia, na engenharia e na matemática.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
@@ -230,19 +250,19 @@ const schedule = [
       {
         time: "9h30",
         title: "Palestra magna — Profª. Denise Carvalho (CAPES)",
-        detail: "“Mulheres e meninas em STEM”. Convite aceito.",
+        detail: "“Mulheres e meninas em STEM”.",
       },
       { time: "10h30", title: "Intervalo" },
       {
         time: "11h",
         title: "Palestra — Profª. Márcia Barbosa (Reitora da UFRGS)",
-        detail: "“Água: da Era do Gelo à Nanociência”. Confirmada.",
+        detail: "“Água: da Era do Gelo à Nanociência”.",
       },
       { time: "12h", title: "Intervalo" },
       {
         time: "13h30",
         title: "Palestra — Profª. Rita Mesquita (MMA / INPA)",
-        detail: "Título a ser anunciado. Convidada.",
+        detail: "Título a ser confirmado.",
       },
       {
         time: "14h15",
@@ -253,13 +273,13 @@ const schedule = [
       {
         time: "17h",
         title: "Palestra — Profª. Andrea Gomes Campos (UFOP)",
-        detail: "Título a ser anunciado. Confirmada.",
+        detail: "Título a ser confirmado.",
       },
       { time: "18h", title: "Intervalo" },
       {
         time: "19h",
         title: "Palestra — Profª. Tatiana Sampaio (UFRJ)",
-        detail: "Título a ser anunciado. Convidada.",
+        detail: "Título a ser confirmado.",
       },
     ],
   },
@@ -271,12 +291,12 @@ const schedule = [
       {
         time: "9h",
         title: "Palestra — Profª. Deborah Malta (UFMG)",
-        detail: "Convidada.",
+        detail: "Título a ser confirmado.",
       },
       {
         time: "9h45",
         title: "Palestra — Profª. Roberta Fróes (Vice-reitora da UFOP)",
-        detail: "Título a ser anunciado. Confirmada.",
+        detail: "Título a ser confirmado.",
       },
       {
         time: "10h30",
@@ -350,6 +370,16 @@ function Programacao() {
 
 /* ---------------- PALESTRANTES ---------------- */
 function Palestrantes() {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+
+  const scrollBy = (dir: 1 | -1) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const card = el.querySelector<HTMLElement>("[data-speaker-card]");
+    const delta = card ? card.offsetWidth + 24 : el.clientWidth * 0.8;
+    el.scrollBy({ left: dir * delta, behavior: "smooth" });
+  };
+
   return (
     <section id="palestrantes" className="surface-cream py-24 md:py-32">
       <div className="container-narrow">
@@ -365,34 +395,61 @@ function Palestrantes() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {speakers.map((s) => (
-            <article
-              key={s.name}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-card)] transition-transform hover:-translate-y-1"
-            >
-              <div className="relative aspect-[3/4] overflow-hidden bg-secondary">
-                <img
-                  src={s.img}
-                  alt={`Ilustração representando ${s.name}`}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  width={912}
-                  height={1104}
-                  loading="lazy"
-                />
-                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-card to-transparent" />
-              </div>
-              <div className="p-5">
-                <h3 className="font-display text-lg text-primary">{s.name}</h3>
-                <div className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-copper">
-                  {s.role}
+        <div className="relative mt-14">
+          <button
+            type="button"
+            aria-label="Anterior"
+            onClick={() => scrollBy(-1)}
+            className="absolute -left-2 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 text-primary shadow-[var(--shadow-card)] transition-transform hover:-translate-y-1/2 hover:scale-105 md:inline-flex lg:-left-6"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M15 6l-6 6 6 6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            aria-label="Próximo"
+            onClick={() => scrollBy(1)}
+            className="absolute -right-2 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 text-primary shadow-[var(--shadow-card)] transition-transform hover:-translate-y-1/2 hover:scale-105 md:inline-flex lg:-right-6"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+
+          <div
+            ref={scrollerRef}
+            className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {speakers.map((s) => (
+              <article
+                key={s.name}
+                data-speaker-card
+                className="group flex w-[calc(100%-1rem)] shrink-0 snap-start flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-card)] transition-transform hover:-translate-y-1 sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]"
+              >
+                <div className="relative aspect-[3/4] overflow-hidden bg-secondary">
+                  <img
+                    src={s.img}
+                    alt={`Ilustração representando ${s.name}`}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    width={912}
+                    height={1104}
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-card to-transparent" />
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {s.bio}
-                </p>
-              </div>
-            </article>
-          ))}
+                <div className="p-5">
+                  <h3 className="font-display text-lg text-primary">{s.name}</h3>
+                  <div className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-copper">
+                    {s.role}
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {s.bio}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -443,7 +500,7 @@ function CTA() {
         src={ctaImg}
         alt=""
         aria-hidden
-        className="absolute inset-0 -z-20 h-full w-full object-cover"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-[center_60%]"
         width={1920}
         height={912}
         loading="lazy"
