@@ -147,9 +147,10 @@ function Hero() {
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
-            Um evento gratuito de extensão universitária que aproxima a comunidade
-            de Ouro Preto da ciência, tecnologia, engenharia e matemática — com
-            palestras inspiradoras e oficinas práticas.
+            Um evento gratuito de extensão universitária com dois dias de encontro
+            entre a universidade e a comunidade de Ouro Preto e Mariana: palestras
+            magnas, oficinas práticas e uma celebração das mulheres na ciência,
+            na tecnologia, na engenharia e na matemática.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
