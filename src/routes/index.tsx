@@ -46,7 +46,7 @@ const speakers = [
   {
     name: "Profª. Denise Carvalho",
     role: "Presidenta da CAPES",
-    bio: "Profª. Denise Carvalho é presidenta da CAPES, com vasta experiência em políticas educacionais. É uma referência na inclusão de mulheres nas áreas STEM.",
+    bio: "Presidenta da CAPES, com vasta experiência em políticas educacionais e ampla atuação pela inclusão de mulheres nas áreas STEM.",
     img: speaker1,
   },
   {
@@ -56,16 +56,34 @@ const speakers = [
     img: speaker2,
   },
   {
+    name: "Profª. Rita Mesquita",
+    role: "MMA · INPA",
+    bio: "Bióloga do Instituto Nacional de Pesquisas da Amazônia com longa trajetória em conservação, biodiversidade e políticas ambientais, tendo atuado no Ministério do Meio Ambiente.",
+    img: speaker3,
+  },
+  {
     name: "Profª. Andrea Gomes Campos",
     role: "Docente da UFOP",
     bio: "Desenvolve pesquisas em áreas interdisciplinares, contribuindo para a educação científica local e a formação de novas gerações.",
-    img: speaker3,
+    img: speaker4,
+  },
+  {
+    name: "Profª. Tatiana Sampaio",
+    role: "Docente da UFRJ",
+    bio: "Pesquisadora da Universidade Federal do Rio de Janeiro, com produção acadêmica voltada à divulgação científica e à formação de estudantes em ciência e tecnologia.",
+    img: speaker1,
   },
   {
     name: "Profª. Deborah Malta",
     role: "Pesquisadora da UFMG",
-    bio: "Reconhecida em Ciências Ambientais, traz enfoque crítico sobre o uso de recursos hídricos e sustentabilidade.",
-    img: speaker4,
+    bio: "Referência em saúde coletiva e epidemiologia, com atuação destacada em vigilância de doenças crônicas e promoção da saúde no Brasil.",
+    img: speaker2,
+  },
+  {
+    name: "Profª. Roberta Fróes",
+    role: "Vice-reitora da UFOP",
+    bio: "Vice-reitora da Universidade Federal de Ouro Preto, com trajetória dedicada à gestão universitária, ensino e extensão em ciência e educação.",
+    img: speaker3,
   },
 ];
 
