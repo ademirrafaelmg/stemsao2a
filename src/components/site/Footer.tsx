@@ -1,5 +1,5 @@
 import logoStemsao from "@/assets/logo-stemsao.png.asset.json";
-import logoUfop from "@/assets/logo-ufop-v2.png.asset.json";
+import logoUfop from "@/assets/logo-ufop-v3.png.asset.json";
 
 export function Footer() {
   return (

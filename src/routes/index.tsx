@@ -5,7 +5,7 @@ import { Footer } from "@/components/site/Footer";
 import { ContactForm } from "@/components/site/ContactForm";
 import heroImgAsset from "@/assets/hero-ouro-preto.jpg.asset.json";
 import sobreImg from "@/assets/section-sobre.jpg";
-import ctaImgAsset from "@/assets/cta-background.jpg.asset.json";
+import ctaImgAsset from "@/assets/cta-background-v2.png.asset.json";
 const heroImg = heroImgAsset.url;
 const ctaImg = ctaImgAsset.url;
 import speaker1 from "@/assets/speaker-placeholder-1.jpg";
