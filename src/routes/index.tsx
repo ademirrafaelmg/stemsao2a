@@ -64,7 +64,7 @@ const speakers = [
   {
     name: "Profª. Andrea Gomes Campos",
     role: "Docente da UFOP",
-    bio: "Desenvolve pesquisas em áreas interdisciplinares, contribuindo para a educação científica local e a formação de novas gerações.",
+    bio: "Atua em pesquisa nas áreas de física e materiais, com interesse em ensino de ciências e divulgação científica, contribuindo para a formação de novas gerações.",
     img: speaker4,
   },
   {
