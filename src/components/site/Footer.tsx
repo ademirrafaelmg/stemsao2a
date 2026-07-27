@@ -7,16 +7,16 @@ export function Footer() {
       <div className="container-narrow py-14">
         <div className="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-start gap-4">
               <img
                 src={logoStemsao.url}
                 alt="STEMsão"
-                className="h-[7.5rem] w-[7.5rem] object-contain"
+                className="-mt-3 h-[7.5rem] w-[7.5rem] object-contain"
                 width={144}
                 height={144}
                 loading="lazy"
               />
-              <div>
+              <div className="pt-0.5">
                 <div className="font-display text-2xl">
                   STEM<span className="text-copper">são</span>
                 </div>
@@ -25,7 +25,7 @@ export function Footer() {
                 </div>
               </div>
             </div>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-primary-foreground/75">
+            <p className="-mt-6 max-w-md text-sm leading-relaxed text-primary-foreground/75">
               Evento gratuito de ciência, tecnologia, engenharia e matemática
               promovido pelo ICEB — Universidade Federal de Ouro Preto.
             </p>
