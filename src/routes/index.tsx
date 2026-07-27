@@ -70,7 +70,7 @@ const speakers = [
   {
     name: "Profª. Tatiana Sampaio",
     role: "Docente da UFRJ",
-    bio: "Pesquisadora da Universidade Federal do Rio de Janeiro, com produção acadêmica voltada à divulgação científica e à formação de estudantes em ciência e tecnologia.",
+    bio: "Pesquisadora da UFRJ com atuação em ciências biológicas e biomédicas, investigando fisiologia e bioquímica celular, além de divulgação científica e formação de estudantes.",
     img: speaker1,
   },
   {
