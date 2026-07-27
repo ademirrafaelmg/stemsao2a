@@ -1,5 +1,5 @@
 import logoStemsao from "@/assets/logo-stemsao.png.asset.json";
-import logoUfop from "@/assets/logo-ufop-v2.png.asset.json";
+import logoUfop from "@/assets/logo-ufop-v3.png.asset.json";
 
 export function Footer() {
   return (
@@ -25,7 +25,7 @@ export function Footer() {
                 </div>
               </div>
             </div>
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-primary-foreground/75">
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-primary-foreground/75">
               Evento gratuito de ciência, tecnologia, engenharia e matemática
               promovido pelo ICEB — Universidade Federal de Ouro Preto.
             </p>

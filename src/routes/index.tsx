@@ -5,7 +5,7 @@ import { Footer } from "@/components/site/Footer";
 import { ContactForm } from "@/components/site/ContactForm";
 import heroImgAsset from "@/assets/hero-ouro-preto.jpg.asset.json";
 import sobreImg from "@/assets/section-sobre.jpg";
-import ctaImgAsset from "@/assets/cta-background.jpg.asset.json";
+import ctaImgAsset from "@/assets/cta-background-v2.png.asset.json";
 const heroImg = heroImgAsset.url;
 const ctaImg = ctaImgAsset.url;
 import speaker1 from "@/assets/speaker-placeholder-1.jpg";
@@ -64,13 +64,13 @@ const speakers = [
   {
     name: "Profª. Andrea Gomes Campos",
     role: "Docente da UFOP",
-    bio: "Desenvolve pesquisas em áreas interdisciplinares, contribuindo para a educação científica local e a formação de novas gerações.",
+    bio: "Atua em pesquisa nas áreas de física e materiais, com interesse em ensino de ciências e divulgação científica, contribuindo para a formação de novas gerações.",
     img: speaker4,
   },
   {
     name: "Profª. Tatiana Sampaio",
     role: "Docente da UFRJ",
-    bio: "Pesquisadora da Universidade Federal do Rio de Janeiro, com produção acadêmica voltada à divulgação científica e à formação de estudantes em ciência e tecnologia.",
+    bio: "Pesquisadora da UFRJ com atuação em ciências biológicas e biomédicas, investigando fisiologia e bioquímica celular, além de divulgação científica e formação de estudantes.",
     img: speaker1,
   },
   {
@@ -82,7 +82,7 @@ const speakers = [
   {
     name: "Profª. Roberta Fróes",
     role: "Vice-reitora da UFOP",
-    bio: "Vice-reitora da Universidade Federal de Ouro Preto, com trajetória dedicada à gestão universitária, ensino e extensão em ciência e educação.",
+    bio: "Vice-reitora da UFOP e pesquisadora na área de química, com trabalhos em química analítica e ambiental, aliados à gestão universitária, ensino e extensão.",
     img: speaker3,
   },
 ];
@@ -344,8 +344,8 @@ function Programacao() {
               <h3 className="mt-4 text-2xl">{d.theme}</h3>
               <ul className="mt-6 space-y-4 text-sm text-primary-foreground/85">
                 {d.items.map((item) => (
-                  <li key={item.time + item.title} className="flex gap-4">
-                    <span className="mt-0.5 inline-flex min-w-[3.5rem] justify-center rounded-full bg-copper/20 px-2 py-1 font-display text-[11px] font-semibold tracking-wide text-copper">
+                  <li key={item.time + item.title} className="flex items-start gap-4">
+                    <span className="inline-flex h-5 w-16 shrink-0 items-center justify-center self-start rounded-full bg-copper/20 font-display text-[11px] font-semibold tracking-wide text-copper">
                       {item.time}
                     </span>
                     <div className="flex-1">
