@@ -11,7 +11,7 @@ export function Footer() {
               <img
                 src={logoStemsao.url}
                 alt="STEMsão"
-                className="-mt-3 h-[7.5rem] w-[7.5rem] object-contain"
+                className="-mt-7 h-[7.5rem] w-[7.5rem] object-contain"
                 width={144}
                 height={144}
                 loading="lazy"
