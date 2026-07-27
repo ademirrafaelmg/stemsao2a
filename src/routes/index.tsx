@@ -82,7 +82,7 @@ const speakers = [
   {
     name: "Profª. Roberta Fróes",
     role: "Vice-reitora da UFOP",
-    bio: "Vice-reitora da Universidade Federal de Ouro Preto, com trajetória dedicada à gestão universitária, ensino e extensão em ciência e educação.",
+    bio: "Vice-reitora da UFOP e pesquisadora na área de química, com trabalhos em química analítica e ambiental, aliados à gestão universitária, ensino e extensão.",
     img: speaker3,
   },
 ];
