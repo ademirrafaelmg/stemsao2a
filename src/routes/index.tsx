@@ -344,8 +344,8 @@ function Programacao() {
               <h3 className="mt-4 text-2xl">{d.theme}</h3>
               <ul className="mt-6 space-y-4 text-sm text-primary-foreground/85">
                 {d.items.map((item) => (
-                  <li key={item.time + item.title} className="flex gap-4">
-                    <span className="mt-0.5 inline-flex min-w-[3.5rem] justify-center rounded-full bg-copper/20 px-2 py-1 font-display text-[11px] font-semibold tracking-wide text-copper">
+                  <li key={item.time + item.title} className="flex items-start gap-4">
+                    <span className="inline-flex h-6 w-16 shrink-0 items-center justify-center self-start rounded-full bg-copper/20 font-display text-[11px] font-semibold tracking-wide text-copper">
                       {item.time}
                     </span>
                     <div className="flex-1">
