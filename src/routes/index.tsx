@@ -6,8 +6,10 @@ import { ContactForm } from "@/components/site/ContactForm";
 import heroImgAsset from "@/assets/hero-ouro-preto.jpg.asset.json";
 import sobreImg from "@/assets/section-sobre.jpg";
 import ctaImgAsset from "@/assets/cta-background-v2.png.asset.json";
+import logoAsset from "@/assets/logo-stemsao.png.asset.json";
 const heroImg = heroImgAsset.url;
 const ctaImg = ctaImgAsset.url;
+const logoImg = logoAsset.url;
 import speaker1 from "@/assets/speaker-placeholder-1.jpg";
 import speaker2 from "@/assets/speaker-placeholder-2.jpg";
 import speaker3 from "@/assets/speaker-placeholder-3.jpg";
@@ -135,40 +137,52 @@ function Hero() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_bottom_left,_transparent,_color-mix(in_oklab,var(--purple-deep)_60%,transparent)_75%)]" />
 
       <div className="container-narrow relative flex min-h-[92vh] flex-col justify-end pb-16 pt-40 md:pb-24 md:pt-44">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-primary-foreground/90 backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-copper" />
-            12 e 13 de novembro · 2026 · Ouro Preto/MG
+        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)]">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-primary-foreground/90 backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-copper" />
+              12 e 13 de novembro · 2026 · Ouro Preto/MG
+            </div>
+            <h1 className="mt-6 font-display text-5xl font-extrabold leading-[0.98] text-primary-foreground sm:text-6xl md:text-7xl lg:text-8xl">
+              STEM<span className="text-gradient-copper">são</span>
+              <span className="mt-3 block font-sans text-lg font-medium uppercase tracking-[0.24em] text-primary-foreground/80 sm:text-xl">
+                Ciências para todas as pessoas
+              </span>
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
+              Um evento gratuito de extensão universitária com dois dias de encontro
+              entre a universidade e a comunidade de Ouro Preto e Mariana: palestras
+              magnas, oficinas práticas e uma celebração das mulheres na ciência,
+              na tecnologia, na engenharia e na matemática.
+            </p>
+            <div className="mt-9 flex flex-wrap items-center gap-4">
+              <a
+                href="#contato"
+                className="group inline-flex items-center gap-3 rounded-full bg-copper px-7 py-4 font-display text-sm font-bold uppercase tracking-[0.18em] text-copper-foreground shadow-[var(--shadow-soft)] transition-all hover:brightness-110"
+              >
+                Inscreva-se já
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </a>
+              <a
+                href="#sobre"
+                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-6 py-4 text-sm font-medium text-primary-foreground/90 backdrop-blur transition-colors hover:bg-primary-foreground/10"
+              >
+                Conheça o evento
+              </a>
+            </div>
           </div>
-          <h1 className="mt-6 font-display text-5xl leading-[0.98] text-primary-foreground sm:text-6xl md:text-7xl lg:text-8xl">
-            STEM<span className="text-gradient-copper">são</span>
-            <span className="mt-3 block font-sans text-lg font-medium uppercase tracking-[0.24em] text-primary-foreground/80 sm:text-xl">
-              Ciências para todas as pessoas
-            </span>
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
-            Um evento gratuito de extensão universitária com dois dias de encontro
-            entre a universidade e a comunidade de Ouro Preto e Mariana: palestras
-            magnas, oficinas práticas e uma celebração das mulheres na ciência,
-            na tecnologia, na engenharia e na matemática.
-          </p>
-          <div className="mt-9 flex flex-wrap items-center gap-4">
-            <a
-              href="#contato"
-              className="group inline-flex items-center gap-3 rounded-full bg-copper px-7 py-4 font-display text-sm uppercase tracking-[0.18em] text-copper-foreground shadow-[var(--shadow-soft)] transition-all hover:brightness-110"
-            >
-              Inscreva-se já
-              <span className="transition-transform group-hover:translate-x-1">→</span>
-            </a>
-            <a
-              href="#sobre"
-              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-6 py-4 text-sm font-medium text-primary-foreground/90 backdrop-blur transition-colors hover:bg-primary-foreground/10"
-            >
-              Conheça o evento
-            </a>
+
+          <div className="hidden justify-self-center lg:flex lg:justify-self-end">
+            <img
+              src={logoImg}
+              alt="Logo do STEMsão"
+              className="w-full max-w-[26rem] drop-shadow-[0_18px_40px_rgba(0,0,0,0.45)]"
+              loading="eager"
+            />
           </div>
         </div>
       </div>
+
     </section>
   );
 }
