@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "9c555ecf-03e1-4aff-b773-546cb1c99718",
-  "project_id": "ffad96ce-4c37-4a37-b4b1-b74ee4bdbbbc",
-  "url": "/__l5e/assets-v1/9c555ecf-03e1-4aff-b773-546cb1c99718/logo-ufop.png",
-  "r2_key": "a/v1/ffad96ce-4c37-4a37-b4b1-b74ee4bdbbbc/9c555ecf-03e1-4aff-b773-546cb1c99718/logo-ufop.png",
-  "original_filename": "logo-ufop.png",
-  "size": 651393,
   "content_type": "image/png",
-  "created_at": "2026-07-27T16:57:25Z"
+  "created_at": "2026-07-27T16:57:25Z",
+  "original_filename": "logo-ufop.png",
+  "project_id": "dee43d97-6c27-408e-ad75-f36c5d3de6a0",
+  "r2_key": "a/v1/dee43d97-6c27-408e-ad75-f36c5d3de6a0/9c555ecf-03e1-4aff-b773-546cb1c99718/logo-ufop.png",
+  "size": 651393,
+  "url": "/__l5e/assets-v1/9c555ecf-03e1-4aff-b773-546cb1c99718/logo-ufop.png",
+  "version": 1
 }

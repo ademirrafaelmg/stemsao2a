@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "baf1e707-4b55-432f-8a2d-654ca43556b6",
-  "project_id": "ffad96ce-4c37-4a37-b4b1-b74ee4bdbbbc",
-  "url": "/__l5e/assets-v1/baf1e707-4b55-432f-8a2d-654ca43556b6/logo-stemsao.png",
-  "r2_key": "a/v1/ffad96ce-4c37-4a37-b4b1-b74ee4bdbbbc/baf1e707-4b55-432f-8a2d-654ca43556b6/logo-stemsao.png",
-  "original_filename": "logo-stemsao.png",
-  "size": 828267,
   "content_type": "image/png",
-  "created_at": "2026-07-22T01:33:23Z"
+  "created_at": "2026-07-22T01:33:23Z",
+  "original_filename": "logo-stemsao.png",
+  "project_id": "dee43d97-6c27-408e-ad75-f36c5d3de6a0",
+  "r2_key": "a/v1/dee43d97-6c27-408e-ad75-f36c5d3de6a0/baf1e707-4b55-432f-8a2d-654ca43556b6/logo-stemsao.png",
+  "size": 828267,
+  "url": "/__l5e/assets-v1/baf1e707-4b55-432f-8a2d-654ca43556b6/logo-stemsao.png",
+  "version": 1
 }

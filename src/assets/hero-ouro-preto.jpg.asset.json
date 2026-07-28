@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "7e79b0f7-10a5-4cd3-808e-0f967654098e",
-  "project_id": "ffad96ce-4c37-4a37-b4b1-b74ee4bdbbbc",
-  "url": "/__l5e/assets-v1/7e79b0f7-10a5-4cd3-808e-0f967654098e/ouro_preto.jpg",
-  "r2_key": "a/v1/ffad96ce-4c37-4a37-b4b1-b74ee4bdbbbc/7e79b0f7-10a5-4cd3-808e-0f967654098e/ouro_preto.jpg",
-  "original_filename": "ouro_preto.jpg",
-  "size": 1275615,
   "content_type": "image/jpeg",
-  "created_at": "2026-07-23T00:02:11Z"
+  "created_at": "2026-07-23T00:02:11Z",
+  "original_filename": "ouro_preto.jpg",
+  "project_id": "dee43d97-6c27-408e-ad75-f36c5d3de6a0",
+  "r2_key": "a/v1/dee43d97-6c27-408e-ad75-f36c5d3de6a0/7e79b0f7-10a5-4cd3-808e-0f967654098e/ouro_preto.jpg",
+  "size": 1275615,
+  "url": "/__l5e/assets-v1/7e79b0f7-10a5-4cd3-808e-0f967654098e/ouro_preto.jpg",
+  "version": 1
 }

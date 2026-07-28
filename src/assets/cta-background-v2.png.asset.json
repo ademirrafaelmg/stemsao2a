@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "f6d38df7-2ee7-4221-b79d-272af06b005d",
-  "project_id": "ffad96ce-4c37-4a37-b4b1-b74ee4bdbbbc",
-  "url": "/__l5e/assets-v1/f6d38df7-2ee7-4221-b79d-272af06b005d/museu_inconfidencia.png",
-  "r2_key": "a/v1/ffad96ce-4c37-4a37-b4b1-b74ee4bdbbbc/f6d38df7-2ee7-4221-b79d-272af06b005d/museu_inconfidencia.png",
-  "original_filename": "museu_inconfidencia.png",
-  "size": 2659585,
   "content_type": "image/png",
-  "created_at": "2026-07-27T16:57:32Z"
+  "created_at": "2026-07-27T16:57:32Z",
+  "original_filename": "museu_inconfidencia.png",
+  "project_id": "dee43d97-6c27-408e-ad75-f36c5d3de6a0",
+  "r2_key": "a/v1/dee43d97-6c27-408e-ad75-f36c5d3de6a0/f6d38df7-2ee7-4221-b79d-272af06b005d/museu_inconfidencia.png",
+  "size": 2659585,
+  "url": "/__l5e/assets-v1/f6d38df7-2ee7-4221-b79d-272af06b005d/museu_inconfidencia.png",
+  "version": 1
 }
