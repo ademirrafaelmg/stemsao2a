@@ -57,7 +57,7 @@ const speakers = [
   },
   {
     name: "Profª. Rita Mesquita",
-    role: "MMA · INPA",
+    role: "Pesquisadora do INPA e MMA",
     bio: "Bióloga do Instituto Nacional de Pesquisas da Amazônia com longa trajetória em conservação, biodiversidade e políticas ambientais, tendo atuado no Ministério do Meio Ambiente.",
     img: speaker3,
   },
