@@ -11,7 +11,7 @@ export function Footer() {
               <img
                 src={logoStemsao.url}
                 alt="STEMsão"
-                className="-mt-7 h-[7.5rem] w-[7.5rem] object-contain"
+                className="-mt-11 h-[7.5rem] w-[7.5rem] object-contain"
                 width={144}
                 height={144}
                 loading="lazy"
@@ -25,7 +25,7 @@ export function Footer() {
                 </div>
               </div>
             </div>
-            <p className="-mt-8 max-w-md text-sm leading-relaxed text-primary-foreground/75">
+            <p className="-mt-7 max-w-md text-sm leading-relaxed text-primary-foreground/75">
               Evento gratuito de ciência, tecnologia, engenharia e matemática
               promovido pelo ICEB — Universidade Federal de Ouro Preto.
             </p>

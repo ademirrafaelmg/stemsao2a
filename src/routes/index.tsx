@@ -57,14 +57,14 @@ const speakers = [
   },
   {
     name: "Profª. Rita Mesquita",
-    role: "MMA · INPA",
+    role: "Pesquisadora do INPA e MMA",
     bio: "Bióloga do Instituto Nacional de Pesquisas da Amazônia com longa trajetória em conservação, biodiversidade e políticas ambientais, tendo atuado no Ministério do Meio Ambiente.",
     img: speaker3,
   },
   {
     name: "Profª. Andrea Gomes Campos",
     role: "Docente da UFOP",
-    bio: "Cientista da computação com ênfase em processamento e análise de imagens, visão computacional e aprendizado de máquina, aplicados a imagens de materiais, células e processos industriais. Premiada no desafio de segmentação de células cervicais do IEEE ISBI e com o Best Student Paper Award em Inteligência Artificial na ICEIS.",
+    bio: "Cientista da computação da UFOP com ênfase em processamento e análise de imagens, visão computacional e aprendizado de máquina, aplicados a imagens de materiais, células e processos industriais.",
     img: speaker4,
   },
   {
@@ -439,7 +439,7 @@ function Palestrantes() {
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-card to-transparent" />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-serif text-xl font-semibold leading-snug text-primary">
+                  <h3 className="font-serif text-xl font-black leading-snug text-primary">
                     {s.name}
                   </h3>
                   <div className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-copper">
