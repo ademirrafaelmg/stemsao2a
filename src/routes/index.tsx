@@ -64,7 +64,7 @@ const speakers = [
   {
     name: "Profª. Andrea Gomes Campos",
     role: "Docente da UFOP",
-    bio: "Cientista da computação com ênfase em processamento e análise de imagens, visão computacional e aprendizado de máquina, aplicados a imagens de materiais, células e processos industriais. Premiada no desafio de segmentação de células cervicais do IEEE ISBI e com o Best Student Paper Award em Inteligência Artificial na ICEIS.",
+    bio: "Cientista da computação da UFOP com ênfase em processamento e análise de imagens, visão computacional e aprendizado de máquina, aplicados a imagens de materiais, células e processos industriais.",
     img: speaker4,
   },
   {
