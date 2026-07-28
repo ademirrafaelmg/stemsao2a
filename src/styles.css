@@ -117,7 +117,9 @@
 
   h1, h2, h3 {
     font-family: var(--font-display);
-    letter-spacing: -0.01em;
+    font-weight: 700;
+    font-variation-settings: "opsz" 96;
+    letter-spacing: -0.015em;
     line-height: 1.05;
   }
 
