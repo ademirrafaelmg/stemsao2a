@@ -1,10 +1,18 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { ContactForm } from "@/components/site/ContactForm";
 import heroImgAsset from "@/assets/hero-ouro-preto.jpg.asset.json";
-import sobreImg from "@/assets/section-sobre.jpg";
+import iceb1 from "@/assets/iceb1.jpg.asset.json";
+import iceb2 from "@/assets/iceb2.jpg.asset.json";
+import iceb3 from "@/assets/iceb3.jpg.asset.json";
+import iceb4 from "@/assets/iceb4.jpg.asset.json";
+import iceb5 from "@/assets/iceb5.jpg.asset.json";
+import iceb6 from "@/assets/iceb6.jpg.asset.json";
+import iceb7 from "@/assets/iceb7.jpg.asset.json";
+import iceb8 from "@/assets/iceb8.jpg.asset.json";
+
 import ctaImgAsset from "@/assets/cta-background-v2.png.asset.json";
 import logoAsset from "@/assets/logo-stemsao.png.asset.json";
 const heroImg = heroImgAsset.url;
