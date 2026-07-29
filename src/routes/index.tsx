@@ -232,17 +232,8 @@ function Sobre() {
           </dl>
         </div>
 
-        <div className="relative">
-          <div className="absolute -inset-4 -z-10 rounded-3xl bg-copper/15 blur-2xl" />
-          <img
-            src={sobreImg}
-            alt="Ilustração abstrata representando ciência e diversidade"
-            className="w-full rounded-3xl border border-border shadow-[var(--shadow-soft)]"
-            width={1408}
-            height={1008}
-            loading="lazy"
-          />
-        </div>
+        <SobreCarousel />
+
       </div>
     </section>
   );
