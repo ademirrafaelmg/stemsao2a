@@ -153,7 +153,7 @@ function Hero() {
             </div>
             <h1 className="mt-6 font-display text-5xl font-extrabold leading-[0.98] text-primary-foreground sm:text-6xl md:text-7xl lg:text-8xl">
               STEM<span className="text-gradient-copper">são</span>
-              <span className="mt-3 block font-sans text-lg font-medium uppercase tracking-[0.24em] text-primary-foreground/80 sm:text-xl">
+              <span className="mt-3 block font-sans text-xl font-medium uppercase tracking-[0.24em] text-primary-foreground/80 sm:text-2xl">
                 Ciências para todas as pessoas
               </span>
             </h1>
@@ -166,14 +166,14 @@ function Hero() {
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a
                 href="#contato"
-                className="group inline-flex items-center gap-3 rounded-full bg-copper px-8 py-4 font-display text-lg font-extrabold uppercase tracking-[0.16em] text-copper-foreground shadow-[var(--shadow-soft)] transition-all hover:brightness-110 sm:text-xl"
+                className="group inline-flex items-center gap-2 rounded-full bg-copper px-6 py-3 font-display text-sm font-extrabold uppercase tracking-[0.16em] text-copper-foreground shadow-[var(--shadow-soft)] transition-all hover:brightness-110"
               >
                 Inscreva-se já
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <a
                 href="#sobre"
-                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-7 py-4 text-lg font-bold uppercase tracking-[0.16em] text-primary-foreground/90 backdrop-blur transition-colors hover:bg-primary-foreground/10 sm:text-xl"
+                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-6 py-3 text-sm font-bold uppercase tracking-[0.16em] text-primary-foreground/90 backdrop-blur transition-colors hover:bg-primary-foreground/10"
               >
                 Conheça o evento
               </a>
