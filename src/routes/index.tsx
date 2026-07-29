@@ -1,10 +1,18 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { ContactForm } from "@/components/site/ContactForm";
 import heroImgAsset from "@/assets/hero-ouro-preto.jpg.asset.json";
-import sobreImg from "@/assets/section-sobre.jpg";
+import iceb1 from "@/assets/iceb1.jpg.asset.json";
+import iceb2 from "@/assets/iceb2.jpg.asset.json";
+import iceb3 from "@/assets/iceb3.jpg.asset.json";
+import iceb4 from "@/assets/iceb4.jpg.asset.json";
+import iceb5 from "@/assets/iceb5.jpg.asset.json";
+import iceb6 from "@/assets/iceb6.jpg.asset.json";
+import iceb7 from "@/assets/iceb7.jpg.asset.json";
+import iceb8 from "@/assets/iceb8.jpg.asset.json";
+
 import ctaImgAsset from "@/assets/cta-background-v2.png.asset.json";
 import logoAsset from "@/assets/logo-stemsao.png.asset.json";
 const heroImg = heroImgAsset.url;
@@ -158,14 +166,14 @@ function Hero() {
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a
                 href="#contato"
-                className="group inline-flex items-center gap-3 rounded-full bg-copper px-7 py-4 font-display text-sm font-bold uppercase tracking-[0.18em] text-copper-foreground shadow-[var(--shadow-soft)] transition-all hover:brightness-110"
+                className="group inline-flex items-center gap-3 rounded-full bg-copper px-8 py-4 font-display text-lg font-extrabold uppercase tracking-[0.16em] text-copper-foreground shadow-[var(--shadow-soft)] transition-all hover:brightness-110 sm:text-xl"
               >
                 Inscreva-se já
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <a
                 href="#sobre"
-                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-6 py-4 text-sm font-medium text-primary-foreground/90 backdrop-blur transition-colors hover:bg-primary-foreground/10"
+                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-7 py-4 text-lg font-bold uppercase tracking-[0.16em] text-primary-foreground/90 backdrop-blur transition-colors hover:bg-primary-foreground/10 sm:text-xl"
               >
                 Conheça o evento
               </a>
@@ -232,21 +240,89 @@ function Sobre() {
           </dl>
         </div>
 
-        <div className="relative">
-          <div className="absolute -inset-4 -z-10 rounded-3xl bg-copper/15 blur-2xl" />
-          <img
-            src={sobreImg}
-            alt="Ilustração abstrata representando ciência e diversidade"
-            className="w-full rounded-3xl border border-border shadow-[var(--shadow-soft)]"
-            width={1408}
-            height={1008}
-            loading="lazy"
-          />
-        </div>
+        <SobreCarousel />
+
       </div>
     </section>
   );
 }
+
+const sobreFotos = [
+  { src: iceb1.url, alt: "Estudantes observando amostras em microscópios" },
+  { src: iceb2.url, alt: "Pesquisadora apresentando material biológico a crianças" },
+  { src: iceb3.url, alt: "Demonstração de realidade virtual no laboratório de computação" },
+  { src: iceb4.url, alt: "Visitante observando amostra em microscópio" },
+  { src: iceb5.url, alt: "Monitora demonstrando experimento no ICEB" },
+  { src: iceb6.url, alt: "Oficina de química com estudantes" },
+  { src: iceb7.url, alt: "Estudantes em fila usando microscópios" },
+  { src: iceb8.url, alt: "Atividade interativa com jogos no evento" },
+];
+
+function SobreCarousel() {
+  const [index, setIndex] = useState(0);
+  const total = sobreFotos.length;
+  const go = (dir: 1 | -1) => setIndex((i) => (i + dir + total) % total);
+
+  return (
+    <div className="relative">
+      <div className="absolute -inset-4 -z-10 rounded-3xl bg-copper/15 blur-2xl" />
+      <div className="relative overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
+        <div className="aspect-[1408/1008] w-full">
+          {sobreFotos.map((foto, i) => (
+            <img
+              key={foto.src}
+              src={foto.src}
+              alt={foto.alt}
+              className={
+                "absolute inset-0 h-full w-full object-cover transition-opacity duration-500 " +
+                (i === index ? "opacity-100" : "opacity-0")
+              }
+              loading={i === 0 ? "eager" : "lazy"}
+            />
+          ))}
+        </div>
+
+        <button
+          type="button"
+          aria-label="Foto anterior"
+          onClick={() => go(-1)}
+          className="absolute left-3 top-1/2 z-10 inline-flex -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card/90 p-3 text-primary shadow-[var(--shadow-card)] backdrop-blur transition-transform hover:scale-105"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M15 6l-6 6 6 6" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          aria-label="Próxima foto"
+          onClick={() => go(1)}
+          className="absolute right-3 top-1/2 z-10 inline-flex -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card/90 p-3 text-primary shadow-[var(--shadow-card)] backdrop-blur transition-transform hover:scale-105"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+
+        <div className="absolute inset-x-0 bottom-4 z-10 flex justify-center gap-2">
+          {sobreFotos.map((foto, i) => (
+            <button
+              key={foto.src}
+              type="button"
+              aria-label={`Ir para a foto ${i + 1}`}
+              onClick={() => setIndex(i)}
+              className={
+                "h-2 rounded-full transition-all " +
+                (i === index ? "w-6 bg-copper" : "w-2 bg-card/70 hover:bg-card")
+              }
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
 
 /* ---------------- PROGRAMAÇÃO ---------------- */
 const schedule = [
@@ -333,11 +409,11 @@ function Programacao() {
     <section id="programacao" className="surface-plate py-24 md:py-32">
       <div className="container-narrow">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="text-xs font-semibold uppercase tracking-[0.24em] text-copper">
+          <div className="text-sm font-bold uppercase tracking-[0.24em] text-copper">
             Programação
           </div>
-          <h2 className="mt-4 text-4xl md:text-5xl">Dois dias intensos de ciência</h2>
-          <p className="mt-4 text-primary-foreground/80">
+          <h2 className="mt-4 text-4xl font-bold md:text-5xl">Dois dias intensos de ciência</h2>
+          <p className="mt-4 text-lg text-primary-foreground/85">
             Palestras magnas, mesas-redondas e oficinas práticas nos dias 12 e
             13 de novembro. Programação sujeita a pequenas alterações.
           </p>
@@ -350,22 +426,22 @@ function Programacao() {
               className="group relative overflow-hidden rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5 p-8 backdrop-blur transition-all hover:bg-primary-foreground/10"
             >
               <div className="flex items-baseline justify-between">
-                <div className="font-display text-3xl text-copper">{d.day}</div>
-                <div className="text-xs uppercase tracking-[0.18em] text-primary-foreground/60">
+                <div className="font-display text-4xl font-extrabold text-copper">{d.day}</div>
+                <div className="text-sm font-semibold uppercase tracking-[0.18em] text-primary-foreground/70">
                   {d.date}
                 </div>
               </div>
-              <h3 className="mt-4 text-2xl">{d.theme}</h3>
-              <ul className="mt-6 space-y-4 text-sm text-primary-foreground/85">
+              <h3 className="mt-4 text-2xl font-bold md:text-3xl">{d.theme}</h3>
+              <ul className="mt-6 space-y-5 text-base text-primary-foreground/85">
                 {d.items.map((item) => (
                   <li key={item.time + item.title} className="flex items-start gap-4">
-                    <span className="inline-flex h-7 w-[4.5rem] shrink-0 items-center justify-center self-start rounded-full bg-copper text-sm font-medium tracking-wide text-copper-foreground">
+                    <span className="inline-flex h-8 w-[5rem] shrink-0 items-center justify-center self-start rounded-full bg-copper text-base font-bold tracking-wide text-copper-foreground">
                       {item.time}
                     </span>
                     <div className="flex-1">
-                      <div className="font-medium text-primary-foreground">{item.title}</div>
+                      <div className="text-lg font-bold text-primary-foreground">{item.title}</div>
                       {item.detail && (
-                        <p className="mt-1 text-xs leading-relaxed text-primary-foreground/70">
+                        <p className="mt-1 text-base leading-relaxed text-primary-foreground/75">
                           {item.detail}
                         </p>
                       )}

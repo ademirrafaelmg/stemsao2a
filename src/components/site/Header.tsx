@@ -41,7 +41,7 @@ export function Header() {
           <div className="hidden sm:block leading-tight">
             <div
               className={
-                "font-display text-lg tracking-tight " +
+                "font-display text-2xl font-extrabold tracking-tight " +
                 (scrolled ? "text-primary" : "text-primary-foreground")
               }
             >
@@ -49,7 +49,7 @@ export function Header() {
             </div>
             <div
               className={
-                "text-[10px] uppercase tracking-[0.18em] " +
+                "text-[11px] font-semibold uppercase tracking-[0.18em] " +
                 (scrolled ? "text-muted-foreground" : "text-primary-foreground/70")
               }
             >
@@ -64,10 +64,10 @@ export function Header() {
               key={item.href}
               href={item.href}
               className={
-                "px-3 py-2 text-sm font-medium tracking-wide transition-colors " +
+                "px-3 py-2 text-base font-bold tracking-wide transition-colors " +
                 (scrolled
-                  ? "text-foreground/80 hover:text-primary"
-                  : "text-primary-foreground/85 hover:text-copper")
+                  ? "text-foreground/85 hover:text-primary"
+                  : "text-primary-foreground/90 hover:text-copper")
               }
             >
               {item.label}

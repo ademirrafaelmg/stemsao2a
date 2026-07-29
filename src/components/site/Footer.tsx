@@ -17,10 +17,10 @@ export function Footer() {
                 loading="lazy"
               />
               <div className="pt-0.5">
-                <div className="font-display text-2xl">
+                <div className="font-display text-3xl font-extrabold">
                   STEM<span className="text-copper">são</span>
                 </div>
-                <div className="text-xs uppercase tracking-[0.2em] text-primary-foreground/70">
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/70">
                   Evento de Extensão · UFOP
                 </div>
               </div>

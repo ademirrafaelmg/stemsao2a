@@ -48,7 +48,7 @@
   --color-ink: var(--ink);
 
   --font-display: "Fraunces", "Georgia", serif;
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-sans: "Fraunces", "Georgia", serif;
   --font-serif: "Fraunces", "Georgia", serif;
 }
 
@@ -111,7 +111,7 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-variation-settings: "opsz" 14;
     -webkit-font-smoothing: antialiased;
   }
 
