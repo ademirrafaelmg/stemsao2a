@@ -409,11 +409,11 @@ function Programacao() {
     <section id="programacao" className="surface-plate py-24 md:py-32">
       <div className="container-narrow">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="text-xs font-semibold uppercase tracking-[0.24em] text-copper">
+          <div className="text-sm font-bold uppercase tracking-[0.24em] text-copper">
             Programação
           </div>
-          <h2 className="mt-4 text-4xl md:text-5xl">Dois dias intensos de ciência</h2>
-          <p className="mt-4 text-primary-foreground/80">
+          <h2 className="mt-4 text-4xl font-bold md:text-5xl">Dois dias intensos de ciência</h2>
+          <p className="mt-4 text-lg text-primary-foreground/85">
             Palestras magnas, mesas-redondas e oficinas práticas nos dias 12 e
             13 de novembro. Programação sujeita a pequenas alterações.
           </p>
@@ -426,22 +426,22 @@ function Programacao() {
               className="group relative overflow-hidden rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5 p-8 backdrop-blur transition-all hover:bg-primary-foreground/10"
             >
               <div className="flex items-baseline justify-between">
-                <div className="font-display text-3xl text-copper">{d.day}</div>
-                <div className="text-xs uppercase tracking-[0.18em] text-primary-foreground/60">
+                <div className="font-display text-4xl font-extrabold text-copper">{d.day}</div>
+                <div className="text-sm font-semibold uppercase tracking-[0.18em] text-primary-foreground/70">
                   {d.date}
                 </div>
               </div>
-              <h3 className="mt-4 text-2xl">{d.theme}</h3>
-              <ul className="mt-6 space-y-4 text-sm text-primary-foreground/85">
+              <h3 className="mt-4 text-2xl font-bold md:text-3xl">{d.theme}</h3>
+              <ul className="mt-6 space-y-5 text-base text-primary-foreground/85">
                 {d.items.map((item) => (
                   <li key={item.time + item.title} className="flex items-start gap-4">
-                    <span className="inline-flex h-7 w-[4.5rem] shrink-0 items-center justify-center self-start rounded-full bg-copper text-sm font-medium tracking-wide text-copper-foreground">
+                    <span className="inline-flex h-8 w-[5rem] shrink-0 items-center justify-center self-start rounded-full bg-copper text-base font-bold tracking-wide text-copper-foreground">
                       {item.time}
                     </span>
                     <div className="flex-1">
-                      <div className="font-medium text-primary-foreground">{item.title}</div>
+                      <div className="text-lg font-bold text-primary-foreground">{item.title}</div>
                       {item.detail && (
-                        <p className="mt-1 text-xs leading-relaxed text-primary-foreground/70">
+                        <p className="mt-1 text-base leading-relaxed text-primary-foreground/75">
                           {item.detail}
                         </p>
                       )}
