@@ -247,6 +247,83 @@ function Sobre() {
   );
 }
 
+const sobreFotos = [
+  { src: iceb1.url, alt: "Estudantes observando amostras em microscópios" },
+  { src: iceb2.url, alt: "Pesquisadora apresentando material biológico a crianças" },
+  { src: iceb3.url, alt: "Demonstração de realidade virtual no laboratório de computação" },
+  { src: iceb4.url, alt: "Visitante observando amostra em microscópio" },
+  { src: iceb5.url, alt: "Monitora demonstrando experimento no ICEB" },
+  { src: iceb6.url, alt: "Oficina de química com estudantes" },
+  { src: iceb7.url, alt: "Estudantes em fila usando microscópios" },
+  { src: iceb8.url, alt: "Atividade interativa com jogos no evento" },
+];
+
+function SobreCarousel() {
+  const [index, setIndex] = useState(0);
+  const total = sobreFotos.length;
+  const go = (dir: 1 | -1) => setIndex((i) => (i + dir + total) % total);
+
+  return (
+    <div className="relative">
+      <div className="absolute -inset-4 -z-10 rounded-3xl bg-copper/15 blur-2xl" />
+      <div className="relative overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
+        <div className="aspect-[1408/1008] w-full">
+          {sobreFotos.map((foto, i) => (
+            <img
+              key={foto.src}
+              src={foto.src}
+              alt={foto.alt}
+              className={
+                "absolute inset-0 h-full w-full object-cover transition-opacity duration-500 " +
+                (i === index ? "opacity-100" : "opacity-0")
+              }
+              loading={i === 0 ? "eager" : "lazy"}
+            />
+          ))}
+        </div>
+
+        <button
+          type="button"
+          aria-label="Foto anterior"
+          onClick={() => go(-1)}
+          className="absolute left-3 top-1/2 z-10 inline-flex -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card/90 p-3 text-primary shadow-[var(--shadow-card)] backdrop-blur transition-transform hover:scale-105"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M15 6l-6 6 6 6" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          aria-label="Próxima foto"
+          onClick={() => go(1)}
+          className="absolute right-3 top-1/2 z-10 inline-flex -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card/90 p-3 text-primary shadow-[var(--shadow-card)] backdrop-blur transition-transform hover:scale-105"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+
+        <div className="absolute inset-x-0 bottom-4 z-10 flex justify-center gap-2">
+          {sobreFotos.map((foto, i) => (
+            <button
+              key={foto.src}
+              type="button"
+              aria-label={`Ir para a foto ${i + 1}`}
+              onClick={() => setIndex(i)}
+              className={
+                "h-2 rounded-full transition-all " +
+                (i === index ? "w-6 bg-copper" : "w-2 bg-card/70 hover:bg-card")
+              }
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+
 /* ---------------- PROGRAMAÇÃO ---------------- */
 const schedule = [
   {
