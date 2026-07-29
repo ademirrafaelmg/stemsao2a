@@ -158,14 +158,14 @@ function Hero() {
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a
                 href="#contato"
-                className="group inline-flex items-center gap-3 rounded-full bg-copper px-7 py-4 font-display text-sm font-bold uppercase tracking-[0.18em] text-copper-foreground shadow-[var(--shadow-soft)] transition-all hover:brightness-110"
+                className="group inline-flex items-center gap-3 rounded-full bg-copper px-8 py-4 font-display text-lg font-extrabold uppercase tracking-[0.16em] text-copper-foreground shadow-[var(--shadow-soft)] transition-all hover:brightness-110 sm:text-xl"
               >
                 Inscreva-se já
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <a
                 href="#sobre"
-                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-6 py-4 text-sm font-medium text-primary-foreground/90 backdrop-blur transition-colors hover:bg-primary-foreground/10"
+                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-7 py-4 text-lg font-bold uppercase tracking-[0.16em] text-primary-foreground/90 backdrop-blur transition-colors hover:bg-primary-foreground/10 sm:text-xl"
               >
                 Conheça o evento
               </a>
