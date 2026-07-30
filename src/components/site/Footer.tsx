@@ -68,7 +68,7 @@ export function Footer() {
             <img
               src={logoUfop.url}
               alt="Universidade Federal de Ouro Preto"
-              className="h-40 w-auto self-stretch object-contain"
+              className="hidden h-40 w-auto self-stretch object-contain md:block"
               loading="lazy"
             />
           </div>
