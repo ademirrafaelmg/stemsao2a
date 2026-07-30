@@ -145,8 +145,8 @@ function Hero() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_bottom_left,_transparent,_color-mix(in_oklab,var(--purple-deep)_60%,transparent)_75%)]" />
 
       <div className="container-narrow relative flex min-h-[92vh] flex-col justify-end pb-16 pt-40 md:pb-24 md:pt-44">
-        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)]">
-          <div className="max-w-3xl">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-12">
+          <div className="order-2 max-w-3xl lg:order-1">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-primary-foreground/90 backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-copper" />
               12 e 13 de novembro · 2026 · Ouro Preto/MG
@@ -180,11 +180,11 @@ function Hero() {
             </div>
           </div>
 
-          <div className="hidden justify-self-center lg:flex lg:justify-self-end">
+          <div className="order-1 flex justify-center lg:order-2 lg:justify-self-end">
             <img
               src={logoImg}
               alt="Logo do STEMsão"
-              className="w-full max-w-[26rem] drop-shadow-[0_18px_40px_rgba(0,0,0,0.45)]"
+              className="w-full max-w-[15rem] drop-shadow-[0_18px_40px_rgba(0,0,0,0.45)] sm:max-w-[18rem] lg:max-w-[26rem]"
               loading="eager"
             />
           </div>
