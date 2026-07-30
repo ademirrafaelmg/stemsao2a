@@ -157,7 +157,7 @@ function Hero() {
                 Ciências para todas as pessoas
               </span>
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
+            <p className="mt-6 max-w-xl text-justify text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
               Um evento gratuito de extensão universitária com dois dias de encontro
               entre a universidade e a comunidade de Ouro Preto e Mariana: palestras
               magnas, oficinas práticas e uma celebração das mulheres na ciência,
@@ -207,13 +207,13 @@ function Sobre() {
           <h2 className="mt-4 text-4xl text-primary md:text-5xl">
             Conheça o STEMsão
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-foreground/80 md:text-lg">
+          <p className="mt-6 text-justify text-base leading-relaxed text-foreground/80 md:text-lg">
             O STEMsão é um evento gratuito que oferece uma plataforma para a
             troca de conhecimento em ciências, tecnologia, engenharia e
             matemática. Com palestras de figuras renomadas e atividades
             práticas, buscamos envolver a comunidade acadêmica e escolar local.
           </p>
-          <p className="mt-4 text-base leading-relaxed text-foreground/80 md:text-lg">
+          <p className="mt-4 text-justify text-base leading-relaxed text-foreground/80 md:text-lg">
             O evento visa estimular o interesse de jovens por carreiras
             científicas e tecnológicas — com atenção especial à presença de
             mulheres nas áreas STEM.
@@ -535,7 +535,7 @@ function Palestrantes() {
                   <div className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-copper">
                     {s.role}
                   </div>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-3 text-justify text-sm leading-relaxed text-muted-foreground">
                     {s.bio}
                   </p>
                 </div>
@@ -573,7 +573,7 @@ function Organizacao() {
                 {String(i + 1).padStart(2, "0")}
               </div>
               <h3 className="mt-4 font-display text-2xl text-primary">{o.name}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/75">
+              <p className="mt-3 text-justify text-sm leading-relaxed text-foreground/75">
                 {o.text}
               </p>
             </article>
