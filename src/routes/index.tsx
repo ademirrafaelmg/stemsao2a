@@ -184,7 +184,7 @@ function Hero() {
             <img
               src={logoImg}
               alt="Logo do STEMsão"
-              className="w-full max-w-[15rem] drop-shadow-[0_18px_40px_rgba(0,0,0,0.45)] sm:max-w-[18rem] lg:max-w-[26rem]"
+              className="w-full max-w-[18rem] drop-shadow-[0_18px_40px_rgba(0,0,0,0.45)] sm:max-w-[20rem] lg:max-w-[26rem]"
               loading="eager"
             />
           </div>
