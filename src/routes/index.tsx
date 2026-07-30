@@ -490,7 +490,7 @@ function Palestrantes() {
             type="button"
             aria-label="Anterior"
             onClick={() => scrollBy(-1)}
-            className="absolute -left-2 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 text-primary shadow-[var(--shadow-card)] transition-transform hover:-translate-y-1/2 hover:scale-105 md:inline-flex lg:-left-6"
+            className="absolute -left-2 top-1/2 z-10 inline-flex -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 text-primary shadow-[var(--shadow-card)] transition-transform hover:-translate-y-1/2 hover:scale-105 lg:-left-6"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M15 6l-6 6 6 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -500,7 +500,7 @@ function Palestrantes() {
             type="button"
             aria-label="Próximo"
             onClick={() => scrollBy(1)}
-            className="absolute -right-2 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 text-primary shadow-[var(--shadow-card)] transition-transform hover:-translate-y-1/2 hover:scale-105 md:inline-flex lg:-right-6"
+            className="absolute -right-2 top-1/2 z-10 inline-flex -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 text-primary shadow-[var(--shadow-card)] transition-transform hover:-translate-y-1/2 hover:scale-105 lg:-right-6"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
