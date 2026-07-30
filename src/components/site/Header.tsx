@@ -34,11 +34,11 @@ export function Header() {
           <img
             src={logoStemsao.url}
             alt="STEMsão"
-            className="h-[5.25rem] w-[5.25rem] md:h-[7.5rem] md:w-[7.5rem] object-contain"
+            className="hidden md:block md:h-[7.5rem] md:w-[7.5rem] object-contain"
             width={144}
             height={144}
           />
-          <div className="hidden sm:block leading-tight">
+          <div className="block leading-tight">
             <div
               className={
                 "font-display text-2xl font-extrabold tracking-tight " +
