@@ -180,11 +180,11 @@ function Hero() {
             </div>
           </div>
 
-          <div className="hidden justify-self-center lg:flex lg:justify-self-end">
+          <div className="order-1 flex justify-center lg:order-2 lg:justify-self-end">
             <img
               src={logoImg}
               alt="Logo do STEMsão"
-              className="w-full max-w-[26rem] drop-shadow-[0_18px_40px_rgba(0,0,0,0.45)]"
+              className="w-full max-w-[15rem] drop-shadow-[0_18px_40px_rgba(0,0,0,0.45)] sm:max-w-[18rem] lg:max-w-[26rem]"
               loading="eager"
             />
           </div>
