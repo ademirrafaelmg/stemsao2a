@@ -619,7 +619,7 @@ function CTA() {
           Não perca
         </div>
         <h2 className="mx-auto mt-4 max-w-3xl text-4xl text-primary-foreground md:text-6xl">
-          Garanta seu ingresso e faça parte do STEMsão
+          Garanta sua vaga e faça parte do STEMsão
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-primary-foreground/80">
           Participe deste evento transformador em Ouro Preto e amplie seus
