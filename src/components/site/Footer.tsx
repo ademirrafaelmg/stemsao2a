@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="surface-plate">
       <div className="container-narrow py-14">
-        <div className="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
+        <div className="grid items-start gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
           <div className="flex items-center gap-4 md:block">
             <div className="min-w-0 flex-1">
               <div className="flex items-start gap-4">
@@ -74,7 +74,7 @@ export function Footer() {
                 </a>
               </p>
             </div>
-            <div className="hidden items-center gap-5 self-stretch md:flex">
+            <div className="hidden items-start gap-5 self-start md:flex">
               <img
                 src={logoUfop.url}
                 alt="Universidade Federal de Ouro Preto"
@@ -91,9 +91,13 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/60 md:flex-row md:items-center">
-          <p>© 2026 STEMsão · UFOP / ICEB. Todos os direitos reservados.</p>
-          <p>Evento de extensão universitária.</p>
+      </div>
+
+      <div className="border-t border-primary-foreground/15">
+        <div className="container-narrow py-6 text-xs leading-relaxed text-primary-foreground/60">
+          <p className="w-full">
+            © 2026 STEMsão · UFOP / ICEB. Todos os direitos reservados. Evento de extensão universitária.
+          </p>
         </div>
       </div>
     </footer>

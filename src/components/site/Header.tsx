@@ -86,7 +86,7 @@ export function Header() {
           <img
             src={logoIceb.url}
             alt="Instituto de Ciências Exatas e Biológicas — ICEB"
-            className="hidden md:block h-[7.5rem] w-auto object-contain"
+            className="hidden md:block h-[7.5rem] w-[7.5rem] object-contain"
             loading="lazy"
           />
           <button
