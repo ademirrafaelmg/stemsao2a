@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import logoStemsao from "@/assets/logo-stemsao.png.asset.json";
+import logoIceb from "@/assets/iceb.png.asset.json";
 
 const nav = [
   { href: "#sobre", label: "Sobre" },
@@ -82,6 +83,12 @@ export function Header() {
           >
             Inscreva-se
           </a>
+          <img
+            src={logoIceb.url}
+            alt="Instituto de Ciências Exatas e Biológicas — ICEB"
+            className="hidden md:block h-[7.5rem] w-auto object-contain"
+            loading="lazy"
+          />
           <button
             type="button"
             aria-label="Abrir menu"
