@@ -1,5 +1,6 @@
 import logoStemsao from "@/assets/logo-stemsao.png.asset.json";
 import logoUfop from "@/assets/logo-ufop-v3.png.asset.json";
+import logoIceb from "@/assets/iceb.png.asset.json";
 
 export function Footer() {
   return (
@@ -31,12 +32,20 @@ export function Footer() {
                 promovido pelo ICEB — Universidade Federal de Ouro Preto.
               </p>
             </div>
-            <img
-              src={logoUfop.url}
-              alt="Universidade Federal de Ouro Preto"
-              className="h-28 w-auto shrink-0 object-contain md:hidden"
-              loading="lazy"
-            />
+            <div className="flex shrink-0 items-center gap-4 md:hidden">
+              <img
+                src={logoUfop.url}
+                alt="Universidade Federal de Ouro Preto"
+                className="h-28 w-auto object-contain"
+                loading="lazy"
+              />
+              <img
+                src={logoIceb.url}
+                alt="Instituto de Ciências Exatas e Biológicas — ICEB"
+                className="h-28 w-auto object-contain"
+                loading="lazy"
+              />
+            </div>
           </div>
 
           <div>
@@ -65,12 +74,20 @@ export function Footer() {
                 </a>
               </p>
             </div>
-            <img
-              src={logoUfop.url}
-              alt="Universidade Federal de Ouro Preto"
-              className="hidden h-40 w-auto self-stretch object-contain md:block"
-              loading="lazy"
-            />
+            <div className="hidden items-center gap-5 self-stretch md:flex">
+              <img
+                src={logoUfop.url}
+                alt="Universidade Federal de Ouro Preto"
+                className="h-40 w-auto object-contain"
+                loading="lazy"
+              />
+              <img
+                src={logoIceb.url}
+                alt="Instituto de Ciências Exatas e Biológicas — ICEB"
+                className="h-40 w-auto object-contain"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
 
