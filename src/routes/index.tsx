@@ -15,6 +15,9 @@ import iceb8 from "@/assets/iceb8.jpg.asset.json";
 
 import ctaImgAsset from "@/assets/cta-background-v2.png.asset.json";
 import logoAsset from "@/assets/logo-stemsao.png.asset.json";
+import logoUfop from "@/assets/logo-ufop-v3.png.asset.json";
+import logoIceb from "@/assets/iceb.png.asset.json";
+import logoPrefeitura from "@/assets/prefeitura_ouro_preto.png.asset.json";
 const heroImg = heroImgAsset.url;
 const ctaImg = ctaImgAsset.url;
 const logoImg = logoAsset.url;
@@ -101,14 +104,20 @@ const organizers = [
   {
     name: "Instituto de Ciências Exatas e Biológicas — ICEB",
     text: "O Instituto de Ciências Exatas e Biológicas da UFOP é responsável pela organização e execução do evento, promovendo conhecimento e pesquisa científica.",
+    logo: logoIceb,
+    logoAlt: "ICEB",
   },
   {
     name: "Universidade Federal de Ouro Preto — UFOP",
     text: "A Universidade Federal de Ouro Preto proporciona infraestrutura e recursos para o evento, reforçando seu compromisso com a difusão do conhecimento.",
+    logo: logoUfop,
+    logoAlt: "UFOP",
   },
   {
     name: "Prefeitura de Ouro Preto",
     text: "Apoia o evento reconhecendo a importância da educação científica para o desenvolvimento local e o engajamento da comunidade.",
+    logo: logoPrefeitura,
+    logoAlt: "Prefeitura de Ouro Preto",
   },
 ];
 
@@ -568,8 +577,16 @@ function Organizacao() {
               className="group relative overflow-hidden rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)]"
             >
               <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-copper/10 blur-2xl transition-all group-hover:bg-copper/20" />
-              <div className="font-display text-6xl text-copper/40">
-                {String(i + 1).padStart(2, "0")}
+              <div className="flex items-start justify-between">
+                <div className="font-display text-6xl text-copper/40">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <img
+                  src={o.logo.url}
+                  alt={o.logoAlt}
+                  className="h-16 w-auto object-contain"
+                  loading="lazy"
+                />
               </div>
               <h3 className="mt-4 font-display text-2xl text-primary">{o.name}</h3>
               <p className="mt-3 text-justify text-sm leading-relaxed text-foreground/75">
