@@ -54,46 +54,46 @@ export const Route = createFileRoute("/")({
 
 const speakers = [
   {
-    name: "Profª. Denise Carvalho",
-    role: "Presidenta da CAPES",
-    bio: "Presidenta da CAPES, com vasta experiência em políticas educacionais e ampla atuação pela inclusão de mulheres nas áreas STEM.",
+    name: "Profª. Sandra Nogueira",
+    role: "UFOP / MEC",
+    bio: "Pesquisadora e gestora com atuação na UFOP e no Ministério da Educação, dedicada à extensão universitária e à inclusão de meninas e mulheres nas áreas STEM.",
     img: speaker1,
   },
   {
-    name: "Profª. Márcia Barbosa",
-    role: "Reitora da UFRGS",
-    bio: "Especialista em Ciência da Água, seu trabalho aborda desde a Era do Gelo até a Nanociência, com reconhecimento internacional.",
-    img: speaker2,
-  },
-  {
-    name: "Profª. Rita Mesquita",
-    role: "Pesquisadora do INPA e MMA",
-    bio: "Bióloga do Instituto Nacional de Pesquisas da Amazônia com longa trajetória em conservação, biodiversidade e políticas ambientais, tendo atuado no Ministério do Meio Ambiente.",
-    img: speaker3,
-  },
-  {
-    name: "Profª. Andrea Gomes Campos",
+    name: "Profª. Andrea Campos",
     role: "Docente da UFOP",
     bio: "Cientista da computação da UFOP com ênfase em processamento e análise de imagens, visão computacional e aprendizado de máquina, aplicados a imagens de materiais, células e processos industriais.",
     img: speaker4,
   },
   {
-    name: "Profª. Tatiana Sampaio",
-    role: "Docente da UFRJ",
-    bio: "Pesquisadora da UFRJ com atuação em ciências biológicas e biomédicas, investigando fisiologia e bioquímica celular, além de divulgação científica e formação de estudantes.",
-    img: speaker1,
+    name: "Profª. Rita Mesquita",
+    role: "Pesquisadora do INPA",
+    bio: "Bióloga do Instituto Nacional de Pesquisas da Amazônia com longa trajetória em conservação, biodiversidade e políticas ambientais, tendo atuado no Ministério do Meio Ambiente.",
+    img: speaker3,
   },
   {
-    name: "Profª. Deborah Malta",
-    role: "Pesquisadora da UFMG",
-    bio: "Referência em saúde coletiva e epidemiologia, com atuação destacada em vigilância de doenças crônicas e promoção da saúde no Brasil.",
+    name: "Profª. Gabrielle Weber",
+    role: "Pesquisadora da USP",
+    bio: "Pesquisadora da Universidade de São Paulo com atuação nas áreas de ciência, tecnologia e inovação, e engajamento em ações de divulgação científica.",
     img: speaker2,
   },
   {
-    name: "Profª. Roberta Fróes",
-    role: "Vice-reitora da UFOP",
-    bio: "Vice-reitora da UFOP e pesquisadora na área de química, com trabalhos em química analítica e ambiental, aliados à gestão universitária, ensino e extensão.",
+    name: "Profª. Fernanda Staniscuaski",
+    role: "Docente da UFRGS",
+    bio: "Pesquisadora da UFRGS e fundadora do movimento Parent in Science, referência nacional na discussão sobre maternidade e carreira na ciência.",
+    img: speaker1,
+  },
+  {
+    name: "Profª. Roberta Eliane Santos Froes",
+    role: "Docente da UFOP",
+    bio: "Pesquisadora da UFOP na área de química, com trabalhos em química analítica e ambiental, aliados à gestão universitária, ensino e extensão.",
     img: speaker3,
+  },
+  {
+    name: "Profª. Giovanna Machado",
+    role: "Pesquisadora do CETENE/MCTI",
+    bio: "Pesquisadora do Centro de Tecnologias Estratégicas do Nordeste (CETENE/MCTI), com atuação em nanotecnologia e materiais avançados aplicados à saúde e à agricultura.",
+    img: speaker2,
   },
 ];
 
