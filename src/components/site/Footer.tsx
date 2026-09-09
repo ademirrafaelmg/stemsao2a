@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="surface-plate">
       <div className="container-narrow py-14">
-        <div className="grid items-start gap-10 md:grid-cols-3">
+        <div className="grid items-start gap-10 md:grid-cols-[1fr_1fr_1.2fr]">
           <div className="flex flex-col items-center gap-4 md:items-start">
             <div className="flex items-start gap-4">
               <img
@@ -59,7 +59,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center gap-5 md:flex-row md:items-start md:justify-between">
+          <div className="flex flex-col items-center gap-6 md:items-start">
             <div className="text-center md:text-left">
               <h4 className="text-xs uppercase tracking-[0.2em] text-copper">Data</h4>
               <p className="mt-4 text-sm leading-relaxed text-primary-foreground/85">
@@ -72,17 +72,17 @@ export function Footer() {
                 </a>
               </p>
             </div>
-            <div className="hidden items-start gap-5 self-start md:flex md:pr-4">
+            <div className="hidden items-center gap-5 md:flex">
               <img
                 src={logoUfop.url}
                 alt="Universidade Federal de Ouro Preto"
-                className="h-40 w-auto object-contain"
+                className="h-28 w-auto object-contain"
                 loading="lazy"
               />
               <img
                 src={logoIceb.url}
                 alt="Instituto de Ciências Exatas e Biológicas — ICEB"
-                className="h-40 w-auto object-contain"
+                className="h-28 w-auto object-contain"
                 loading="lazy"
               />
             </div>
