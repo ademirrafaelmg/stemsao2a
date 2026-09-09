@@ -72,7 +72,7 @@ export function Footer() {
                 </a>
               </p>
             </div>
-            <div className="hidden items-start gap-5 self-start md:flex">
+            <div className="hidden items-start gap-5 self-start md:flex md:pr-4">
               <img
                 src={logoUfop.url}
                 alt="Universidade Federal de Ouro Preto"
