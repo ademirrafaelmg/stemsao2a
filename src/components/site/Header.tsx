@@ -35,7 +35,7 @@ export function Header() {
           <img
             src={logoStemsao.url}
             alt="STEMsão"
-            className="hidden md:block md:h-[7.5rem] md:w-[7.5rem] object-contain"
+            className="hidden md:block h-14 w-auto object-contain md:h-16"
             width={144}
             height={144}
           />
@@ -86,7 +86,7 @@ export function Header() {
           <img
             src={logoIceb.url}
             alt="Instituto de Ciências Exatas e Biológicas — ICEB"
-            className="hidden md:block h-[7.5rem] w-[7.5rem] object-contain"
+            className="hidden md:block h-14 w-auto object-contain md:h-16"
             loading="lazy"
           />
           <button
