@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="surface-plate">
       <div className="container-narrow py-14">
-        <div className="grid items-start gap-10 md:grid-cols-[1fr_1fr_1.2fr]">
+        <div className="grid items-start gap-10 md:grid-cols-[1fr_1fr_1.5fr]">
           <div className="flex flex-col items-center gap-4 md:items-start">
             <div className="flex items-start gap-4">
               <img
@@ -59,7 +59,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center gap-6 md:items-start">
+          <div className="flex flex-col items-center gap-5 md:flex-row md:items-start md:justify-between">
             <div className="text-center md:text-left">
               <h4 className="text-xs uppercase tracking-[0.2em] text-copper">Data</h4>
               <p className="mt-4 text-sm leading-relaxed text-primary-foreground/85">
@@ -72,7 +72,7 @@ export function Footer() {
                 </a>
               </p>
             </div>
-            <div className="hidden items-center gap-5 md:flex">
+            <div className="hidden shrink-0 items-start gap-4 md:flex md:pr-2">
               <img
                 src={logoUfop.url}
                 alt="Universidade Federal de Ouro Preto"
