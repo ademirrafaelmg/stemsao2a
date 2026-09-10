@@ -79,7 +79,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <a
             href="#contato"
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-copper px-5 py-2.5 text-sm font-semibold text-copper-foreground shadow-[var(--shadow-card)] transition-transform hover:scale-[1.02] hover:brightness-105"
+            className="hidden md:inline-flex items-center gap-2 rounded-full bg-copper px-5 py-2.5 text-sm font-semibold text-copper-foreground shadow-[var(--shadow-card)] transition-transform hover:scale-[1.02] hover:brightness-105 -ml-8"
           >
             Inscreva-se
           </a>
