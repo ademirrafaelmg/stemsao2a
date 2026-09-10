@@ -39,7 +39,7 @@ export function Header() {
             width={144}
             height={144}
           />
-          <div className="block leading-tight">
+          <div className="block leading-tight ml-3">
             <div
               className={
                 "font-display text-2xl font-extrabold tracking-tight " +
@@ -76,13 +76,14 @@ export function Header() {
           ))}
         </nav>
 
+        <a
+          href="#contato"
+          className="hidden md:inline-flex items-center gap-2 rounded-full bg-copper px-5 py-2.5 text-sm font-semibold text-copper-foreground shadow-[var(--shadow-card)] transition-transform hover:scale-[1.02] hover:brightness-105 -ml-4"
+        >
+          Inscreva-se
+        </a>
+
         <div className="flex items-center gap-3">
-          <a
-            href="#contato"
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-copper px-5 py-2.5 text-sm font-semibold text-copper-foreground shadow-[var(--shadow-card)] transition-transform hover:scale-[1.02] hover:brightness-105 -ml-8"
-          >
-            Inscreva-se
-          </a>
           <img
             src={logoIceb.url}
             alt="Instituto de Ciências Exatas e Biológicas — ICEB"
