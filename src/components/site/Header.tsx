@@ -31,7 +31,7 @@ export function Header() {
       }
     >
       <div className="container-narrow flex h-16 items-center justify-between gap-6 md:h-20">
-        <a href="#top" className="flex items-center gap-5">
+        <a href="#top" className="flex items-center gap-3">
           <img
             src={logoStemsao.url}
             alt="STEMsão"
@@ -39,7 +39,7 @@ export function Header() {
             width={144}
             height={144}
           />
-          <div className="block leading-tight ml-2">
+          <div className="block leading-tight ml-3">
             <div
               className={
                 "font-display text-2xl font-extrabold tracking-tight " +
