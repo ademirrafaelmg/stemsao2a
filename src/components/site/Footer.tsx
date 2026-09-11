@@ -6,9 +6,9 @@ export function Footer() {
   return (
     <footer className="surface-plate">
       <div className="container-narrow py-14">
-        <div className="grid items-start gap-10 md:grid-cols-[1fr_1fr_1.5fr]">
+        <div className="grid items-start gap-10 md:grid-cols-[1.35fr_1fr_1.15fr]">
           <div className="flex flex-col items-center gap-4 md:items-start">
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-2 md:gap-3">
               <img
                 src={logoStemsao.url}
                 alt="STEMsão"
@@ -17,7 +17,7 @@ export function Footer() {
                 height={144}
                 loading="lazy"
               />
-              <div className="ml-20 pt-0.5 md:ml-28">
+              <div className="shrink-0 pt-0.5">
                 <div className="font-display text-3xl font-extrabold">
                   STEM<span className="text-copper">são</span>
                 </div>
