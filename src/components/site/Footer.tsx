@@ -17,7 +17,7 @@ export function Footer() {
                 height={144}
                 loading="lazy"
               />
-              <div className="pt-0.5">
+              <div className="ml-20 pt-0.5 md:ml-28">
                 <div className="font-display text-3xl font-extrabold">
                   STEM<span className="text-copper">são</span>
                 </div>
