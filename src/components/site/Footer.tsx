@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="surface-plate">
       <div className="container-narrow py-14">
-        <div className="grid items-start gap-10 md:grid-cols-[1fr_1fr_1.5fr]">
+        <div className="grid items-start gap-10 md:grid-cols-[1.35fr_1fr_1.15fr]">
           <div className="flex flex-col items-center gap-4 md:items-start">
             <div className="flex items-start gap-2 md:gap-3">
               <img
