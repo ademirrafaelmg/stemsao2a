@@ -44,7 +44,7 @@ export function Workshops() {
 
                   <span
                     role="tooltip"
-                    className="pointer-events-none absolute bottom-[calc(100%-0.25rem)] left-12 z-30 hidden w-[min(34rem,calc(100vw-5rem))] rounded-lg border border-border bg-popover p-5 text-left text-popover-foreground opacity-0 shadow-[var(--shadow-soft)] transition-opacity group-hover/summary:opacity-100 group-focus-visible/summary:opacity-100 md:block"
+                    className="pointer-events-none absolute left-12 top-[calc(100%-0.25rem)] z-30 hidden w-[min(34rem,calc(100vw-5rem))] rounded-lg border border-border bg-popover p-5 text-left text-popover-foreground opacity-0 shadow-[var(--shadow-soft)] transition-opacity group-hover/summary:opacity-100 group-focus-visible/summary:opacity-100 md:block"
                   >
                     <strong className="block text-base font-bold text-primary">
                       {workshop.title}
