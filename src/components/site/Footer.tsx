@@ -1,4 +1,4 @@
-import logoStemsao from "@/assets/logo-stemsao.png.asset.json";
+import logoStemsao from "@/assets/stemsao-2026.png.asset.json";
 import logoUfop from "@/assets/logo-ufop-v3.png.asset.json";
 import logoIceb from "@/assets/iceb.png.asset.json";
 
