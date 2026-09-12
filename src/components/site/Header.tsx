@@ -77,17 +77,17 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 lg:flex-1 lg:justify-center">
           <a
             href="#contato"
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-copper px-5 py-2.5 text-sm font-semibold text-copper-foreground shadow-[var(--shadow-card)] transition-transform hover:scale-[1.02] hover:brightness-105"
+            className="hidden md:inline-flex items-center justify-center gap-2 rounded-full bg-copper px-6 py-2.5 text-sm font-semibold text-copper-foreground whitespace-nowrap shadow-[var(--shadow-card)] transition-transform hover:scale-[1.02] hover:brightness-105"
           >
             Inscreva-se
           </a>
           <img
             src={logoIceb.url}
             alt="Instituto de Ciências Exatas e Biológicas — ICEB"
-            className="hidden md:block h-14 w-auto object-contain md:h-16"
+            className="hidden md:block h-14 w-auto object-contain md:h-16 lg:ml-auto"
             loading="lazy"
           />
           <button
