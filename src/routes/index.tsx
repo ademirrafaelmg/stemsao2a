@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { ContactForm } from "@/components/site/ContactForm";
+import { Workshops } from "@/components/site/Workshops";
 import heroImgAsset from "@/assets/hero-ouro-preto.jpg.asset.json";
 import iceb1 from "@/assets/iceb1.jpg.asset.json";
 import iceb2 from "@/assets/iceb2.jpg.asset.json";
@@ -14,7 +15,7 @@ import iceb7 from "@/assets/iceb7.jpg.asset.json";
 import iceb8 from "@/assets/iceb8.jpg.asset.json";
 
 import ctaImgAsset from "@/assets/cta-background-v2.png.asset.json";
-import logoAsset from "@/assets/logo-stemsao.png.asset.json";
+import logoAsset from "@/assets/stemsao-2026.png.asset.json";
 import logoUfop from "@/assets/logo-ufop-v3.png.asset.json";
 import logoIceb from "@/assets/iceb.png.asset.json";
 import logoPrefeitura from "@/assets/prefeitura_ouro_preto.png.asset.json";
@@ -130,6 +131,7 @@ function Index() {
         <Sobre />
         <Programacao />
         <Palestrantes />
+        <Workshops />
         <Organizacao />
         <CTA />
         <Contato />

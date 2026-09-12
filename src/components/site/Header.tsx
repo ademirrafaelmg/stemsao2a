@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import logoStemsao from "@/assets/logo-stemsao.png.asset.json";
+import logoStemsao from "@/assets/stemsao-2026.png.asset.json";
 import logoIceb from "@/assets/iceb.png.asset.json";
 
 const nav = [
   { href: "#sobre", label: "Sobre" },
   { href: "#programacao", label: "Programação" },
   { href: "#palestrantes", label: "Palestrantes" },
+  { href: "#oficinas", label: "Oficinas" },
   { href: "#organizacao", label: "Organização" },
   { href: "#contato", label: "Contato" },
 ];
