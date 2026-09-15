@@ -297,7 +297,7 @@ function SobreCarousel() {
           type="button"
           aria-label="Foto anterior"
           onClick={() => go(-1)}
-          className="absolute left-3 top-1/2 z-10 inline-flex -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card/90 p-3 text-primary shadow-[var(--shadow-card)] backdrop-blur transition-transform hover:scale-105"
+          className="absolute left-3 top-1/2 z-10 inline-flex min-h-11 min-w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card/90 p-3 text-primary shadow-[var(--shadow-card)] backdrop-blur transition-transform hover:scale-105"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M15 6l-6 6 6 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -307,7 +307,7 @@ function SobreCarousel() {
           type="button"
           aria-label="Próxima foto"
           onClick={() => go(1)}
-          className="absolute right-3 top-1/2 z-10 inline-flex -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card/90 p-3 text-primary shadow-[var(--shadow-card)] backdrop-blur transition-transform hover:scale-105"
+          className="absolute right-3 top-1/2 z-10 inline-flex min-h-11 min-w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card/90 p-3 text-primary shadow-[var(--shadow-card)] backdrop-blur transition-transform hover:scale-105"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -320,6 +320,7 @@ function SobreCarousel() {
               key={foto.src}
               type="button"
               aria-label={`Ir para a foto ${i + 1}`}
+              aria-current={i === index}
               onClick={() => setIndex(i)}
               className={
                 "h-2 rounded-full transition-all " +
@@ -498,9 +499,9 @@ function Palestrantes() {
         <div className="relative mt-14">
           <button
             type="button"
-            aria-label="Anterior"
+            aria-label="Palestrante anterior"
             onClick={() => scrollBy(-1)}
-            className="absolute -left-2 top-1/2 z-10 inline-flex -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 text-primary shadow-[var(--shadow-card)] transition-transform hover:-translate-y-1/2 hover:scale-105 lg:-left-6"
+            className="absolute -left-2 top-1/2 z-10 inline-flex min-h-11 min-w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 text-primary shadow-[var(--shadow-card)] transition-transform hover:-translate-y-1/2 hover:scale-105 lg:-left-6"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M15 6l-6 6 6 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -508,9 +509,9 @@ function Palestrantes() {
           </button>
           <button
             type="button"
-            aria-label="Próximo"
+            aria-label="Próxima palestrante"
             onClick={() => scrollBy(1)}
-            className="absolute -right-2 top-1/2 z-10 inline-flex -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 text-primary shadow-[var(--shadow-card)] transition-transform hover:-translate-y-1/2 hover:scale-105 lg:-right-6"
+            className="absolute -right-2 top-1/2 z-10 inline-flex min-h-11 min-w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card p-3 text-primary shadow-[var(--shadow-card)] transition-transform hover:-translate-y-1/2 hover:scale-105 lg:-right-6"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
