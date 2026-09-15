@@ -95,7 +95,7 @@ export function Header() {
             aria-label="Abrir menu"
             aria-expanded={open}
             className={
-              "lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border " +
+              "lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border " +
               (scrolled
                 ? "border-border text-foreground"
                 : "border-primary-foreground/40 text-primary-foreground")
