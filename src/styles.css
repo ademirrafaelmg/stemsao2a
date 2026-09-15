@@ -263,8 +263,9 @@ html.a11y-contrast body {
   color: oklch(1 0 0);
 }
 
-html.a11y-contrast img:not([alt=""]) {
-  filter: contrast(1.1);
+/* Escurece fotos de fundo decorativas para garantir contraste do texto */
+html.a11y-contrast section > img.absolute.inset-0 {
+  opacity: 0.18;
 }
 
 /* Escala de cinza */
