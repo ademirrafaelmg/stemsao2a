@@ -126,7 +126,7 @@ function Index() {
   return (
     <div id="top" className="min-h-screen">
       <Header />
-      <main>
+      <main id="conteudo">
         <Hero />
         <Sobre />
         <Programacao />

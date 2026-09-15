@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { AccessibilityMenu } from "@/components/site/AccessibilityMenu";
 
 function NotFoundComponent() {
   return (
@@ -125,7 +126,11 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <a href="#conteudo" className="skip-link">
+        Ir para o conteúdo principal
+      </a>
       <Outlet />
+      <AccessibilityMenu />
     </QueryClientProvider>
   );
 }
