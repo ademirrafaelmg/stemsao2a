@@ -268,6 +268,22 @@ html.a11y-contrast section > img.absolute.inset-0 {
   opacity: 0.18;
 }
 
+/* Textos que no tema normal ficam sobre roxo devem permanecer claros */
+html.a11y-contrast [class*="text-primary-foreground"] {
+  color: oklch(1 0 0);
+}
+
+html.a11y-contrast [class*="text-copper-foreground"] {
+  color: oklch(0.13 0 0);
+}
+
+/* Sobre fundos sólidos de destaque, o texto volta a ser escuro */
+html.a11y-contrast .bg-primary,
+html.a11y-contrast .bg-copper,
+html.a11y-contrast .bg-accent {
+  color: oklch(0.13 0 0) !important;
+}
+
 /* Escala de cinza */
 html.a11y-grayscale body {
   filter: grayscale(1);
