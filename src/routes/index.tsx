@@ -230,7 +230,7 @@ function Sobre() {
             mulheres nas áreas STEM.
           </p>
 
-          <dl className="mt-10 grid grid-cols-3 gap-4">
+          <dl className="mt-8 sm:mt-10 grid grid-cols-1 justify-items-center sm:grid-cols-3 sm:justify-items-stretch gap-3.5 sm:gap-4">
             {[
               { n: "10+", l: "Palestrantes" },
               { n: "500+", l: "Participantes" },
@@ -238,12 +238,12 @@ function Sobre() {
             ].map((s) => (
               <div
                 key={s.l}
-                className="rounded-2xl border border-border bg-card px-4 py-5 text-left shadow-[var(--shadow-card)]"
+                className="w-56 sm:w-full rounded-2xl border border-border bg-card px-4 py-4 sm:px-4 sm:py-5 text-center shadow-[var(--shadow-card)] min-w-0"
               >
                 <dt className="font-display text-3xl text-primary md:text-4xl">
                   {s.n}
                 </dt>
-                <dd className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">
+                <dd className="mt-1 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground break-words min-w-0">
                   {s.l}
                 </dd>
               </div>

@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 type Prefs = {
-  fontStep: 0 | 1 | 2;
+  fontStep: 0 | 1 | 2 | 3 | 4;
   contrast: boolean;
   grayscale: boolean;
   underline: boolean;
@@ -31,7 +31,7 @@ const STORAGE_KEY = "stemsao-a11y";
 
 function apply(prefs: Prefs) {
   const el = document.documentElement;
-  el.classList.remove("a11y-font-1", "a11y-font-2");
+  el.classList.remove("a11y-font-1", "a11y-font-2", "a11y-font-3", "a11y-font-4");
   if (prefs.fontStep > 0) el.classList.add(`a11y-font-${prefs.fontStep}`);
   el.classList.toggle("a11y-contrast", prefs.contrast);
   el.classList.toggle("a11y-grayscale", prefs.grayscale);
@@ -123,12 +123,12 @@ export function AccessibilityMenu() {
                 <ZoomOut className="h-4 w-4" aria-hidden="true" />
               </button>
               <span className="flex-1 text-center text-sm font-bold" aria-live="polite">
-                {["Normal", "Maior", "Máximo"][prefs.fontStep]}
+                {["Normal", "Maior", "Super", "Ultra", "Máximo"][prefs.fontStep]}
               </span>
               <button
                 type="button"
-                onClick={() => update({ fontStep: Math.min(2, prefs.fontStep + 1) as Prefs["fontStep"] })}
-                disabled={prefs.fontStep === 2}
+                onClick={() => update({ fontStep: Math.min(4, prefs.fontStep + 1) as Prefs["fontStep"] })}
+                disabled={prefs.fontStep === 4}
                 aria-label="Aumentar tamanho do texto"
                 className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-border text-foreground hover:bg-secondary disabled:opacity-50"
               >

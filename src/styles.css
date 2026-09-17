@@ -228,6 +228,14 @@ html.a11y-font-2 {
   font-size: 125%;
 }
 
+html.a11y-font-3 {
+  font-size: 137.5%;
+}
+
+html.a11y-font-4 {
+  font-size: 150%;
+}
+
 /* Alto contraste */
 html.a11y-contrast {
   --background: oklch(0.13 0 0);
