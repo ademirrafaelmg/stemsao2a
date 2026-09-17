@@ -1,7 +1,5 @@
 # Stemsao V2
 
-consegue criar site estatico a partir de pasta com site wordpress?
-
 This project was built with [Lovable](https://lovable.dev).
 
 **Live app**: https://stemsao2a.lovable.app
