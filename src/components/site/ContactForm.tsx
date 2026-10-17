@@ -49,20 +49,65 @@ export function ContactForm() {
       return;
     }
     setStatus("loading");
-    const { error } = await supabase.from("contact_submissions").insert({
-      name: parsed.data.name,
-      email: parsed.data.email,
-      phone: parsed.data.phone || null,
-      message: parsed.data.message,
-    });
-    if (error) {
-      console.error(error);
-      setStatus("error");
-      setServerError("Não foi possível enviar sua mensagem. Tente novamente em instantes.");
-      return;
+
+    // 1. Salvar no Supabase (backup e histórico no banco)
+    try {
+      await supabase.from("contact_submissions").insert({
+        name: parsed.data.name,
+        email: parsed.data.email,
+        phone: parsed.data.phone || null,
+        message: parsed.data.message,
+      });
+    } catch (dbErr) {
+      console.warn("Aviso: Falha ao gravar backup no banco de dados:", dbErr);
     }
-    setStatus("success");
-    setValues({ name: "", email: "", phone: "", message: "" });
+
+    // 2. Disparo do e-mail diretamente para stemsao@ufop.edu.br
+    try {
+      const targetEmail = "stemsao@ufop.edu.br";
+      const web3FormsKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+      if (web3FormsKey) {
+        // Envio via Web3Forms (caso configurada chave de acesso)
+        await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            access_key: web3FormsKey,
+            name: parsed.data.name,
+            email: parsed.data.email,
+            phone: parsed.data.phone || "Não informado",
+            message: parsed.data.message,
+            from_name: "Site STEMsão 2026",
+            subject: `[STEMsão 2026] Nova mensagem de ${parsed.data.name}`,
+          }),
+        });
+      } else {
+        // Envio direto via FormSubmit para o e-mail oficial
+        await fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            name: parsed.data.name,
+            email: parsed.data.email,
+            phone: parsed.data.phone || "Não informado",
+            message: parsed.data.message,
+            _subject: `[STEMsão 2026] Mensagem de ${parsed.data.name}`,
+            _template: "table",
+            _captcha: "false",
+          }),
+        });
+      }
+
+      setStatus("success");
+      setValues({ name: "", email: "", phone: "", message: "" });
+    } catch (sendErr) {
+      console.error("Erro ao enviar mensagem:", sendErr);
+      setStatus("error");
+      setServerError(
+        "Não foi possível enviar sua mensagem pelo formulário no momento. Por favor, envie diretamente para stemsao@ufop.edu.br."
+      );
+    }
   }
 
   if (status === "success") {

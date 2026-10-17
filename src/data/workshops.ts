@@ -80,7 +80,7 @@ export const workshops: Workshop[] = [
   },
   {
     "title": "DESAFÍsica",
-    "description": "Exposição de equipamentos interativos do Museu de Ciência e Técnica com associação a atividades/brincadeiras com cada um deles e/ou circuito.",
+    "description": "Exposição de equipamentos interativos do Museu de Ciência e Técnica da UFOP com associação de atividades/brincadeiras.",
     "responsible": "Victória Flório Pires de Andrade",
     "department": "Departamento de Física - DEFIS"
   },
@@ -104,7 +104,7 @@ export const workshops: Workshop[] = [
   },
   {
     "title": "O Céu na Terra",
-    "description": "“O céu na terra” é uma ação de mediação científico-cultural no campo da arte ciência, na qual imagens astronômicas e sonoridades compõem uma experiência de imersão no céu profundo usando projeção mapeada. Depende fortemente da disposição de aparatos tecnológicos.",
+    "description": "Exposição de vídeos e astrofotografias, inclusive produzidas em Ouro Preto.",
     "responsible": "Victória Flório",
     "department": "Departamento de Física - DEFIS"
   },

@@ -13,19 +13,22 @@ import iceb5 from "@/assets/iceb5.jpg.asset.json";
 import iceb6 from "@/assets/iceb6.jpg.asset.json";
 import iceb7 from "@/assets/iceb7.jpg.asset.json";
 import iceb8 from "@/assets/iceb8.jpg.asset.json";
-
 import ctaImgAsset from "@/assets/cta-background-v2.png.asset.json";
 import logoAsset from "@/assets/stemsao-2026.png.asset.json";
 import logoUfop from "@/assets/logo-ufop-v3.png.asset.json";
 import logoIceb from "@/assets/iceb.png.asset.json";
 import logoPrefeitura from "@/assets/prefeitura_ouro_preto.png.asset.json";
+import speakerSandra from "@/assets/speaker-sandra.jpg";
+import speakerAndrea from "@/assets/speaker-andrea.jpg";
+import speakerGabrielle from "@/assets/speaker-gabrielle.jpg";
+import speakerFernanda from "@/assets/speaker-fernanda.jpg";
+import speakerRoberta from "@/assets/speaker-roberta.jpg";
+import speakerGiovanna from "@/assets/speaker-giovanna.jpg";
+import speakerNadja from "@/assets/speaker-nadja.jpg";
+
 const heroImg = heroImgAsset.url;
 const ctaImg = ctaImgAsset.url;
 const logoImg = logoAsset.url;
-import speaker1 from "@/assets/speaker-placeholder-1.jpg";
-import speaker2 from "@/assets/speaker-placeholder-2.jpg";
-import speaker3 from "@/assets/speaker-placeholder-3.jpg";
-import speaker4 from "@/assets/speaker-placeholder-4.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -58,46 +61,46 @@ export const Route = createFileRoute("/")({
 
 const speakers = [
   {
-    name: "Profª. Sandra Nogueira",
-    role: "UFOP / MEC",
-    bio: "Pesquisadora e gestora com atuação na UFOP e no Ministério da Educação, dedicada à extensão universitária e à inclusão de meninas e mulheres nas áreas STEM.",
-    img: speaker1,
-  },
-  {
     name: "Profª. Andrea Campos",
     role: "Docente da UFOP",
-    bio: "Cientista da computação da UFOP com ênfase em processamento e análise de imagens, visão computacional e aprendizado de máquina, aplicados a imagens de materiais, células e processos industriais.",
-    img: speaker4,
-  },
-  {
-    name: "Profª. Rita Mesquita",
-    role: "Pesquisadora do INPA",
-    bio: "Bióloga do Instituto Nacional de Pesquisas da Amazônia com longa trajetória em conservação, biodiversidade e políticas ambientais, tendo atuado no Ministério do Meio Ambiente.",
-    img: speaker3,
-  },
-  {
-    name: "Profª. Gabrielle Weber",
-    role: "Pesquisadora da USP",
-    bio: "Pesquisadora da Universidade de São Paulo com atuação nas áreas de ciência, tecnologia e inovação, e engajamento em ações de divulgação científica.",
-    img: speaker2,
+    bio: "Professora do Departamento de Computação (DECOM) do ICEB/UFOP e docente permanente do Programa de Pós-Graduação em Ciência da Computação. Graduada em Física e doutora em Física Computacional pela USP, atua em Visão Computacional, Processamento e Análise de Imagens e Aprendizado de Máquina aplicados a imagens de materiais, células e processos industriais.",
+    img: speakerAndrea,
   },
   {
     name: "Profª. Fernanda Staniscuaski",
     role: "Docente da UFRGS",
-    bio: "Pesquisadora da UFRGS e fundadora do movimento Parent in Science, referência nacional na discussão sobre maternidade e carreira na ciência.",
-    img: speaker1,
+    bio: "Professora do Instituto de Biociências da UFRGS, graduada em Ciências Biológicas e doutora em Biologia Celular e Molecular pela mesma instituição. Fundadora e coordenadora do movimento Parent in Science, referência nacional na pesquisa sobre os impactos da maternidade e parentalidade na carreira acadêmica, tendo impulsionado a inclusão do registro de licença-maternidade na Plataforma Lattes.",
+    img: speakerFernanda,
   },
   {
-    name: "Profª. Roberta Eliane Santos Froes",
-    role: "Docente da UFOP",
-    bio: "Pesquisadora da UFOP na área de química, com trabalhos em química analítica e ambiental, aliados à gestão universitária, ensino e extensão.",
-    img: speaker3,
+    name: "Profª. Gabrielle Weber",
+    role: "Docente da USP",
+    bio: "Docente do Departamento de Ciências Básicas e Ambientais da Escola de Engenharia de Lorena (EEL/USP). Bacharela em Ciências Moleculares e Doutora em Física pela USP, pesquisa Física de Partículas, grafeno e materiais topológicos. Coordena o projeto Mamutes na Ciência e o Projeto Corpas Trans na USP, atuando em divulgação científica e inclusão LGBTQIA+ na ciência brasileira.",
+    img: speakerGabrielle,
   },
   {
     name: "Profª. Giovanna Machado",
     role: "Pesquisadora do CETENE/MCTI",
-    bio: "Pesquisadora do Centro de Tecnologias Estratégicas do Nordeste (CETENE/MCTI), com atuação em nanotecnologia e materiais avançados aplicados à saúde e à agricultura.",
-    img: speaker2,
+    bio: "Pesquisadora Titular e Diretora do CETENE/MCTI, graduada em Química pela PUCRS e doutora em Ciência dos Materiais pela UFRGS, com pós-doutorado no MIT. Especialista em nanotecnologia, energias renováveis e biotecnologia, é membro da Academia Pernambucana de Ciências e idealizadora do programa Futuras Cientistas, que promove a inclusão de meninas na ciência.",
+    img: speakerGiovanna,
+  },
+  {
+    name: "Profª. Nadja Bernardes",
+    role: "Docente da UFPE",
+    bio: "Professora do Departamento de Física da UFPE, graduada e mestre em Física pela UFMG, com doutorado pelo Max Planck Institute for the Science of Light (Alemanha). Atua em Óptica Quântica e Informação Quântica, investigando comunicação quântica, repetidores quânticos e dinâmicas não-Markovianas. Coordena o Grupo de Informação Quântica da UFPE e integra o INCT de Computação Quântica Aplicada.",
+    img: speakerNadja,
+  },
+  {
+    name: "Profª. Roberta Eliane Santos Froes",
+    role: "Docente da UFOP",
+    bio: "Professora do Departamento de Química e do Programa de Pós-Graduação em Química da UFOP, com especialidade em Química Analítica e espectrometria atômica aplicada a amostras ambientais e alimentícias. Vice-Reitora da UFOP (gestão 2025–2029), aliando pesquisa de excelência à gestão universitária, ensino e extensão.",
+    img: speakerRoberta,
+  },
+  {
+    name: "Profª. Sandra Nogueira",
+    role: "UFOP / MEC",
+    bio: "Professora Associada do Departamento de Arquitetura e Urbanismo da UFOP, com mestrado e doutorado em Planejamento Urbano e Regional pela PUC Minas. Foi Pró-Reitora de Extensão e Cultura da UFOP, Prefeita dos Campi e, no MEC, atuou como Coordenadora-Geral de Extensão na Secretaria de Educação Superior (SESu). Engajada na extensão universitária e na inclusão de mulheres nas áreas STEM.",
+    img: speakerSandra,
   },
 ];
 
@@ -363,7 +366,7 @@ const schedule = [
       { time: "12h", title: "Intervalo" },
       {
         time: "13h30",
-        title: "Palestra — Profª. Rita Mesquita (INPA)",
+        title: "Palestra — Profª. Nadja Bernardes (UFPE)",
         detail: "Título a ser confirmado.",
       },
       {
@@ -373,13 +376,12 @@ const schedule = [
       },
       { time: "16h", title: "Intervalo" },
       {
-        time: "17h",
+        time: "17h30",
         title: "Palestra — Profª. Gabrielle Weber (USP)",
         detail: "Título a ser confirmado.",
       },
-      { time: "18h", title: "Intervalo" },
       {
-        time: "19h",
+        time: "18h30",
         title: "Palestra — Profª. Fernanda Staniscuaski (UFRGS)",
         detail: "Título a ser confirmado.",
       },
@@ -478,7 +480,15 @@ function Palestrantes() {
     if (!el) return;
     const card = el.querySelector<HTMLElement>("[data-speaker-card]");
     const delta = card ? card.offsetWidth + 24 : el.clientWidth * 0.8;
-    el.scrollBy({ left: dir * delta, behavior: "smooth" });
+    const atStart = el.scrollLeft <= 0;
+    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1;
+    if (dir === -1 && atStart) {
+      el.scrollTo({ left: el.scrollWidth, behavior: "smooth" });
+    } else if (dir === 1 && atEnd) {
+      el.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      el.scrollBy({ left: dir * delta, behavior: "smooth" });
+    }
   };
 
   return (
@@ -528,15 +538,14 @@ function Palestrantes() {
                 data-speaker-card
                 className="group flex w-[calc(100%-1rem)] shrink-0 snap-start flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-card)] transition-transform hover:-translate-y-1 sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]"
               >
-                <div className="relative aspect-[3/4] overflow-hidden bg-secondary">
+                <div className="relative aspect-[3/4] overflow-hidden" style={{ background: 'color-mix(in oklab, var(--copper) 8%, transparent)' }}>
                   <img
                     src={s.img}
-                    alt={`Ilustração representando ${s.name}`}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    width={912}
-                    height={1104}
+                    alt={`Foto de ${s.name}`}
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
+                  <div className="absolute inset-0 rounded-[inherit]" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in oklab, var(--copper) 18%, transparent)' }} />
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-card to-transparent" />
                 </div>
                 <div className="p-5">
